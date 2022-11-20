@@ -1,0 +1,353 @@
+body {
+  background-image: url(/images/entry/entry_background.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+@font-face {
+  font-family: "Montserrat-Thin";
+  src: url("/fonts/Montserrat-Thin.ttf");
+}
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url("/fonts/Montserrat-Light.ttf");
+}
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("/fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("/fonts/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("/fonts/Montserrat-Bold.ttf");
+}
+.entry {
+  display: block;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.entry-container {
+  width: 460px;
+}
+.entry-form {
+  padding: 35px 20px;
+  position: relative;
+  background-color: white;
+}
+.entry-form__title {
+  margin: 0 0 36px;
+  text-align: center;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 38px;
+  text-transform: uppercase;
+  color: #161516;
+}
+.entry-form__registration-link {
+  top: 9px;
+  right: 20px;
+  position: absolute;
+  font-family: "Montserrat-Light", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  text-decoration: underline;
+  color: #d58c51;
+}
+.entry-form__input-block {
+  position: relative;
+}
+.entry-form__input-block--check {
+  margin-bottom: 30px;
+}
+.entry-form__input {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 39px;
+  border: 1px solid #d58c51;
+  border-radius: 61px;
+  text-indent: 18px;
+}
+.entry-form__input--checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.entry-form__input--checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.entry-form__input--checkbox + label::before {
+  cursor: pointer;
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #d58c51;
+  border-radius: 50px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+.entry-form__input--checkbox:checked + label::before {
+  background-image: url(/images/entry/check_mark.png);
+  background-size: 12px;
+}
+.entry-form__input::-moz-placeholder {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #161516;
+}
+.entry-form__input:-ms-input-placeholder {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #161516;
+}
+.entry-form__input::placeholder {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #161516;
+}
+.entry-form__input:focus {
+  outline: none;
+}
+.entry-form__error {
+  position: absolute;
+  top: 41px;
+  left: 20px;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 10px;
+  color: #ff0b0b;
+}
+.entry-form__error--empty-log {
+  display: none;
+}
+.entry-form__error--empty-pass {
+  display: none;
+}
+.entry-form__error--empty-check {
+  display: none;
+  top: 25px;
+}
+.entry-form__error--wrong {
+  display: none;
+  top: 30px;
+  left: 170px;
+}
+.entry-form__label {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #301411;
+}
+.entry-form__btn {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 42px;
+  border: none;
+  background: #d58c51;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #131313;
+}
+
+.registration {
+  display: none;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.registration-container {
+  width: 460px;
+}
+.registration-form {
+  padding: 35px 20px;
+  position: relative;
+  background-color: white;
+}
+.registration-form__title {
+  margin: 0 0 36px;
+  text-align: center;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 38px;
+  text-transform: uppercase;
+  color: #161516;
+}
+.registration-form__entry-link {
+  top: 9px;
+  right: 20px;
+  position: absolute;
+  font-family: "Montserrat-Light", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  text-decoration: underline;
+  color: #d58c51;
+}
+.registration-form__input-block {
+  position: relative;
+}
+.registration-form__input-block--check {
+  margin-bottom: 30px;
+}
+.registration-form__input {
+  display: block;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 39px;
+  border: 1px solid #d58c51;
+  border-radius: 61px;
+  text-indent: 18px;
+}
+.registration-form__input--checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.registration-form__input--checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.registration-form__input--checkbox + label::before {
+  cursor: pointer;
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #d58c51;
+  border-radius: 50px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+.registration-form__input--checkbox:checked + label::before {
+  background-image: url(/images/entry/check_mark.png);
+  background-size: 12px;
+}
+.registration-form__input::-moz-placeholder {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #161516;
+}
+.registration-form__input:-ms-input-placeholder {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #161516;
+}
+.registration-form__input::placeholder {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #161516;
+}
+.registration-form__input:focus {
+  outline: none;
+}
+.registration-form__error {
+  position: absolute;
+  top: 41px;
+  left: 20px;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 10px;
+  color: #ff0b0b;
+}
+.registration-form__error--empty-log {
+  display: none;
+}
+.registration-form__error--empty-pass {
+  display: none;
+}
+.registration-form__error--empty-check {
+  display: none;
+  top: 25px;
+}
+.registration-form__error--length-log {
+  display: none;
+}
+.registration-form__error--length-pass {
+  display: none;
+}
+.registration-form__label {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #301411;
+}
+.registration-form__btn {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 42px;
+  border: none;
+  background: #d58c51;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #131313;
+}/*# sourceMappingURL=style.css.map */

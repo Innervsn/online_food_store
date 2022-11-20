@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="entry">
+      <div class="entry-container">
+        <form class="entry-form" action="">
+          <h1 class="entry-form__title">Вход</h1>
+          <a class="entry-form__registration-link" href=""
+            >Зарегистрироваться</a
+          >
+
+          <div class="entry-form__input-block">
+            <input
+              class="entry-form__input entry-form__input-mail"
+              type="email"
+              placeholder="Логин" />
+
+            <span class="entry-form__error entry-form__error--empty-log">
+              Поле не должно быть пустым
+            </span>
+          </div>
+
+          <div class="entry-form__input-block">
+            <input
+              class="entry-form__input entry-form__input-password"
+              type="password"
+              placeholder="Пароль" />
+
+            <span class="entry-form__error entry-form__error--empty-pass">
+              Поле не должно быть пустым
+            </span>
+          </div>
+
+          <div class="entry-form__input-block entry-form__input-block--check">
+            <input
+              class="entry-form__input entry-form__input--checkbox"
+              type="checkbox"
+              id="entr-ckeckbox" />
+
+            <label class="entry-form__label" for="entr-ckeckbox"
+              >Я согласен получать обновления на почту</label
+            >
+
+            <span class="entry-form__error entry-form__error--empty-check">
+              Поле не должно быть пустым
+            </span>
+
+            <span class="entry-form__error entry-form__error--wrong">
+              Логин или пароль неверен
+            </span>
+          </div>
+
+          <button class="entry-form__btn">Войти</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="registration">
+      <div class="registration-container">
+        <form class="registration-form" action="">
+          <h1 class="registration-form__title">Регистрация</h1>
+          <a class="registration-form__entry-link" href="">Авторизоваться</a>
+
+          <div class="registration-form__input-block">
+            <input
+              class="registration-form__input"
+              type="email"
+              placeholder="Логин" />
+
+            <span
+              class="registration-form__error registration-form__error--empty-log">
+              Поле не должно быть пустым
+            </span>
+
+            <span
+              class="registration-form__error registration-form__error--length-log"
+              >Логин должен содержать не менее 4-х символов</span
+            >
+          </div>
+
+          <div class="registration-form__input-block">
+            <input
+              class="registration-form__input"
+              type="password"
+              placeholder="Пароль" />
+
+            <span
+              class="registration-form__error registration-form__error--empty-pass">
+              Поле не должно быть пустым
+            </span>
+
+            <span
+              class="registration-form__error registration-form__error--length-pass"
+              >Пароль должен содержать не менее 4-х символов</span
+            >
+          </div>
+
+          <div
+            class="registration-form__input-block registration-form__input-block--check">
+            <input
+              class="registration-form__input registration-form__input--checkbox"
+              type="checkbox"
+              id="reg-ckeckbox" />
+
+            <label class="registration-form__label" for="reg-ckeckbox"
+              >Я согласен получать обновления на почту</label
+            >
+
+            <span
+              class="registration-form__error registration-form__error--empty-check">
+              Поле не должно быть пустым
+            </span>
+          </div>
+
+          <button class="registration-form__btn">Зарегистрироваться</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

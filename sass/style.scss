@@ -1,0 +1,14 @@
+body {
+  background-image: url(/images/entry/entry_background.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+// Шрифты
+@import "./base/fonts";
+
+//Блоки
+@import "./blocks/entry-form";
+@import "./blocks/reg-form";
