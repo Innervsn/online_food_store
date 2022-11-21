@@ -47,7 +47,6 @@
     }
 
     &__input {
-      font-size: 20px;
       display: block;
       margin-bottom: 15px;
       box-sizing: border-box;
@@ -131,7 +130,8 @@
       &--wrong {
         display: none;
         top: 30px;
-        left: 170px;
+        left: 110px;
+        font-size: 14px;
       }
     }
 
