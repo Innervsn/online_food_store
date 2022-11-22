@@ -1,0 +1,76 @@
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.menu__dish {
+  position: relative;
+  width: 312px;
+  height: 552px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 43px 20px 32px;
+  border: 1px solid #d58c51;
+
+  &-img {
+    margin-bottom: 30px;
+  }
+
+  &-title {
+    margin: 0 0 10px;
+    font-family: "Montserrat-Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    color: #ffffff;
+  }
+
+  &-description {
+    margin: 0;
+    font-family: "Montserrat-Regular", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+  }
+
+  &-price {
+    display: flex;
+    gap: 125px;
+    align-items: center;
+    position: absolute;
+    bottom: 35px;
+  }
+
+  &-cost {
+    font-family: "Montserrat-Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    color: #ffffff;
+  }
+
+  &-weight {
+    font-family: "Montserrat-Regular", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+  }
+
+  &-add {
+    width: 30px;
+    height: 30px;
+    background: #161516;
+    background-image: url(/images/menu/add_btn.svg);
+    border: 2px solid white;
+    border-radius: 50px;
+    background-position: center;
+  }
+}
