@@ -1,5 +1,6 @@
 "use strict";
 
+//Страница регистрации
 const registration = () => {
   // ЛОГИН
   const regLoginInput = document.querySelector(
@@ -96,7 +97,7 @@ const registration = () => {
         regLoginErrorValid.style.display = "none";
       }
 
-      // проверка на валидонсть email
+      // проверка на валидность email
       else if (!validateEmail(regLoginData)) {
         regLoginErrorValid.style.display = "block";
         regLoginErrorEmpty.style.display = "none";
@@ -132,18 +133,30 @@ const registration = () => {
         regCheckboxValid = true;
       }
 
-      // сохраняемая информация из формы регистрации
+      // сохраняемая информация из формы регистрации в Local Storage
       if (
         regLoginValid === true &&
         regPassValid === true &&
         regCheckboxValid === true
       ) {
-        alert("Вы успешно зарегистрированы!");
         function store() {
           localStorage.setItem("login", regLoginInput.value);
           localStorage.setItem("password", regPassInput.value);
         }
         store();
+
+        //алерт (!!!Заменить на картинку "Вы успешно зарегистрированы!")
+        alert("Вы успешно зарегистрированы!");
+
+        //Таймаут на автоматическое переключение на страницу входа 0.5 сек
+        setTimeout(function autoSwitchPage() {
+          document.querySelector(".registration").style.display = "none";
+          document.querySelector(".entry").style.display = "block";
+        }, 500);
+
+        //Правило моментальное переключение на страницу входа
+        // document.querySelector(".registration").style.display = "none";
+        // document.querySelector(".entry").style.display = "block";
       }
     };
     validReg();
@@ -152,6 +165,7 @@ const registration = () => {
 
 registration();
 
+// Страница входа
 const authentication = () => {
   //ЛОГИН
   const entryLoginInput = document.querySelector(".entry-form__input--login"); // поле логина
@@ -205,6 +219,7 @@ const authentication = () => {
   btnEntry.addEventListener("click", (e) => {
     e.preventDefault();
     const validAuthentication = () => {
+      // проверка на пустое поле
       if (entryLoginData != "") {
         entryLoginErrorEmpty.style.display = "none";
       } else {
@@ -213,6 +228,7 @@ const authentication = () => {
       }
 
       if (entryPassData != "") {
+        // проверка на пустое поле
         entryPassErrorEmpty.style.display = "none";
       } else {
         entryPassErrorEmpty.style.display = "block";
@@ -229,7 +245,7 @@ const authentication = () => {
 
       // Проверка Логин/Пароль
       const checkLoginPass = () => {
-        // сохраненная информация после регистрации
+        // получение сохраненной информации после регистрации
         let storedLogin = localStorage.getItem("login");
         let storedPassword = localStorage.getItem("password");
 
@@ -265,6 +281,7 @@ authentication();
 //Переключение страниц Вход/Регистрация
 const switchPage = () => {
   const regLink = document.querySelector(".entry-form__registration-link");
+  const entryLink = document.querySelector(".registration-form__entry-link");
   const entryPage = document.querySelector(".entry");
   const regPage = document.querySelector(".registration");
 
@@ -272,6 +289,12 @@ const switchPage = () => {
     e.preventDefault();
     entryPage.style.display = "none";
     regPage.style.display = "block";
+  });
+
+  entryLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    regPage.style.display = "none";
+    entryPage.style.display = "block";
   });
 };
 
