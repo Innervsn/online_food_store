@@ -1,0 +1,169 @@
+.info-body {
+  background-image: url(/images/dish-info/dish-info_bg.jpg);
+  background-size: cover;
+  
+}
+
+.info-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0 100px;
+
+  &__btn-back {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #d58c51;
+    border-radius: 50px;
+    background-image: url(/images/basket/btn_back.svg);
+    background-position: center;
+    background-color: transparent;
+  }
+
+  &__right-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__basket {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__products {
+    text-align: end;
+  }
+
+  &__amount-number {
+    font-family: "Montserrat-Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: right;
+    color: #ffffff;
+  }
+
+  &__amount-text {
+    padding-left: 5px;
+    font-family: "Montserrat-Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: right;
+    color: #ffffff;
+  }
+
+  &__sum-text {
+    font-family: "Montserrat-Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: right;
+    color: #ffffff;
+  }
+
+  &__sum-cost {
+    padding-left: 8px;
+    font-family: "Montserrat-Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: right;
+    color: #ffffff;
+  }
+
+  &__logout-btn {
+    width: 200px;
+    height: 42px;
+    border: 1px solid #d58c51;
+    background-color: transparent;
+    font-family: "Montserrat-Regular", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #d58c51;
+  }
+}
+
+.info-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+
+  &__dish-img {
+    width: 501px;
+    height: 503px;
+  }
+}
+
+.info-dish {
+  &__title {
+    margin-bottom: 21px;
+    font-family: "Montserrat-Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    color: #d58c51;
+  }
+
+  &__description {
+    margin-bottom: 50px;
+    font-family: "Montserrat-Regular", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+  }
+
+  &__order {
+    display: flex;
+    align-items: center;
+    gap: 68px;
+  }
+
+  &__cost {
+    font-family: "Montserrat-Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 28px;
+    color: #ffffff;
+  }
+
+  &__weight {
+    font-family: "Montserrat-Regular", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+  }
+
+  &__add-btn {
+    width: 200px;
+    height: 42px;
+    background: #d58c51;
+    font-family: "Montserrat-Regular", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    border: none;
+    color: #131313;
+  }
+}

@@ -1,0 +1,105 @@
+.main-body {
+  background: #161516;
+}
+
+.main-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.main-header {
+  margin: 35px 0 75px;
+  padding-top: 10px;
+  background: #161516;
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  
+  .main-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: "Montserrat-Bold", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  &__right-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__basket {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__products {
+    text-align: end;
+  }
+
+  &__amount-number {
+    font-family: "Montserrat-Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: right;
+    color: #ffffff;
+  }
+
+  &__amount-text {
+    padding-left: 5px;
+    font-family: "Montserrat-Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: right;
+    color: #ffffff;
+  }
+
+  &__sum-text {
+    font-family: "Montserrat-Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: right;
+    color: #ffffff;
+  }
+
+  &__sum-cost {
+    padding-left: 8px;
+    font-family: "Montserrat-Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: right;
+    color: #ffffff;
+  }
+
+  &__logout-btn {
+    width: 200px;
+    height: 42px;
+    border: 1px solid #d58c51;
+    background: #161516;
+    font-family: "Montserrat-Regular", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #d58c51;
+  }
+}
