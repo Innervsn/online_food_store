@@ -29,6 +29,10 @@
     background-color: transparent;
   }
 
+  &__btn-back:hover {
+    cursor: pointer;
+  }
+
   &__title {
     margin: 0;
     font-family: "Montserrat-Bold", sans-serif;
@@ -118,6 +122,11 @@
     display: block;
   }
 
+  &__basket-link:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
   &__logout-btn {
     width: 200px;
     height: 42px;
@@ -129,5 +138,12 @@
     font-size: 14px;
     line-height: 17px;
     color: #d58c51;
+  }
+
+  &__logout-btn:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #d58c51;
+    color: #ffffff;
   }
 }

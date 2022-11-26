@@ -114,9 +114,22 @@
     }
 
     &__plus:hover {
+      cursor: pointer;
+      transition: 0.2s;
       width: 30px;
       height: 30px;
       background: #d58c51;
+      background-image: url(/images/basket/btn_plus-hover.png);
+      border: 2px solid white;
+      border-radius: 50px;
+      background-position: center;
+    }
+
+    &__plus:active {
+      transition: 0.1s;
+      width: 30px;
+      height: 30px;
+      background: #161516;
       background-image: url(/images/basket/btn_plus-hover.png);
       border: 2px solid white;
       border-radius: 50px;
@@ -145,9 +158,22 @@
     }
 
     &__minus:hover {
+      cursor: pointer;
+      transition: 0.2s;
       width: 30px;
       height: 30px;
       background: #d58c51;
+      background-image: url(/images/basket/btn_minus-hover.png);
+      border: 2px solid white;
+      border-radius: 50px;
+      background-position: center;
+    }
+
+    &__minus:active {
+      transition: 0.1s;
+      width: 30px;
+      height: 30px;
+      background: #161516;
       background-image: url(/images/basket/btn_minus-hover.png);
       border: 2px solid white;
       border-radius: 50px;
@@ -293,6 +319,12 @@
       font-size: 14px;
       line-height: 17px;
       color: #131313;
+    }
+
+    &__btn-order:hover {
+      cursor: pointer;
+      transition: 0.3s;
+      color: #ffffff;
     }
   }
 }

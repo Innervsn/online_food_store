@@ -60,7 +60,9 @@ const basketDishCounter = () => {
 
     // _______________________________________________
     // Изменение кол-ва добавленного товара в корзине
+    let counterInHeader = document.querySelector(".header__amount-number"); // Счетчик в header
     let counterInBasket = document.querySelector(".basket-dish__amount-number"); // счетчик в корзине
+
     if (
       //клик по кнопке (+) или (-) в карточке товара в корзине
       e.target.classList.contains("basket-dish__plus") ||
@@ -76,11 +78,72 @@ const basketDishCounter = () => {
     }
 
     if (e.target.classList.contains("basket-dish__minus")) {
+      //проверка на товар котрый находится в корзине
+
       if (parseInt(counterInBasket.innerText) > 1) {
-        --counterInBasket.innerText; // уменьшение кол-ва, но не меньше 1
+        counterInBasket.innerText == --counterInBasket.innerText; // уменьшение кол-ва, но не меньше 1
+      } 
+      
+      else if (  // удаление из корзины при нажатии на кнопку (-) полсе того как счетчик уже опустился до 1 
+        e.target.closest(".basket-list")
+      ) {
+        e.target.closest(".basket-dish").remove();
+      }
+    }
+
+    if (e.target.classList.contains("basket-dish__btn-del")) {
+      // обращение к кнопке удаления
+      // удаление товара из корзины
+      if (e.target.closest(".basket-list")) {
+        //обращение к обертке где находится карточка
+        const card = e.target.closest(".basket-dish"); // даем имя блюду где произощел клик
+        counterInBasket = card.querySelector(".basket-dish__amount-number"); //получаем счетчик из карточке в каторой произошел клик
+        counterInHeader.innerText =
+          counterInHeader.innerText - counterInBasket.innerText; // отнимаем из общего счетчика кол-во блюд в удаляемой карточке
+
+        e.target.closest(".basket-dish").remove(); // удаляем карточку
+      }
+    }
+
+    //__________________________________________________________
+    // Счетчик в header
+    if (
+      e.target.classList.contains("basket-dish__plus") ||
+      e.target.classList.contains("menu__dish-add")
+    ) {
+      ++counterInHeader.innerText; // увеличение кол-ва
+    }
+
+    if (e.target.classList.contains("basket-dish__minus")) {
+      if (parseInt(counterInHeader.innerText) > 0) {
+        --counterInHeader.innerText; // уменьшение кол-ва, но не меньше 1
       }
     }
   });
 };
 
 basketDishCounter();
+
+// // ____________________Счетчик Суммы_______________________
+// function addHandlers(dish) {
+//   const dishCost = dish.querySelector(".menu__dish-cost");
+//   const addBtn = dish.querySelector(".menu__dish-add");
+//   const dishSumCounter = document.querySelector(".header__sum-cost");
+//   // const dishBasketSumCounter = document.querySelector(".basket-order__sum"); // досутп к полю counter(сумме) в корзине
+
+//   let sum = 0;
+
+//   dishSumCounter.innerHTML = sum;
+//   // dishBasketSumCounter.innerText = sum; //  сумма в корзине
+
+//   addBtn.addEventListener("click", function () {
+//     dishSumCounter.innerHTML =
+//       Number(dishSumCounter.innerHTML) + Number(dishCost.innerHTML);
+//     // dishBasketSumCounter.innerText =
+//     //   Number(dishBasketSumCounter.innerHTML) + Number(dishCost.innerHTML); // увеличение суммы в корзине
+//   });
+// }
+
+// let counts = document.querySelectorAll(".menu__dish");
+// counts.forEach(addHandlers);
+// // _________________________________________________________________
