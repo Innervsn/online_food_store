@@ -7,508 +7,563 @@
     <link rel="stylesheet" href="/css/style.css" />
     <title>Document</title>
   </head>
-  <body class="main-body">
-    <div class="main-container">
-      <header class="main-header">
-        <div class="main-header-container">
-          <h1 class="main-header__title">наша продукция</h1>
-          <div class="main-header__right-block">
-            <div class="main-header__basket">
-              <div class="main-header__products">
-                <div class="main-header__amount">
-                  <span class="main-header__amount-number"></span>
-                  <span class="main-header__amount-text">товара</span>
-                </div>
+  <body class="body-menu body-info body-basket">
+    <header class="header">
+      <div class="header-container">
+        <button class="header__btn-back"></button>
+        <h1 class="header__title">наша продукция</h1>
+        <h1 class="header__title header__title--basket">
+          Корзина с выбранными товарами
+        </h1>
 
-                <div class="main-header__sum">
-                  <span class="main-header__sum-text">на сумму</span>
-                  <span class="main-header__sum-cost"></span>
-                </div>
+        <div class="header__right-block">
+          <div class="header__basket">
+            <div class="header__list">
+              <div class="header__amount">
+                <span class="header__amount-number" data-counter></span>
+                <span class="header__amount-text">товара</span>
               </div>
 
-              <a class="main-header__basket-link">
-                <img
-                  class="main-header__basket-link--img"
-                  src="/images/menu/basket_btn_img.svg"
-                  alt="" />
-              </a>
+              <div class="header__sum">
+                <span class="header__sum-text">на сумму</span>
+                <span class="header__sum-cost"></span>
+                <span class="header__rubles">₽</span>
+              </div>
             </div>
 
-            <button class="main-header__logout-btn">Выйти</button>
+            <a class="header__basket-link">
+              <img
+                class="header__basket-link--img"
+                src="/images/menu/basket_btn_img.svg"
+                alt="" />
+            </a>
+          </div>
+
+          <button class="header__logout-btn">Выйти</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="menu">
+      <div class="menu-container">
+        <div class="menu__dish menu__dish--1" data-id="01">
+          <div class="menu__dish-image">
+            <img
+              class="menu__dish-img menu__dish-image--img"
+              src="../images/menu/dish_1.svg"
+              alt="" />
+          </div>
+
+          <div class="menu__dish-about">
+            <h2 class="menu__dish-title menu__dish-title">
+              Устрицы по рокфеллеровски
+            </h2>
+
+            <p class="menu__dish-description menu__dish-description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
+              maxime voluptas earum quisquam!
+            </p>
+          </div>
+
+          <div class="menu__dish-price">
+            <div class="menu__dish-params">
+              <span class="menu__dish-cost menu__dish-cost--1">700</span>
+              <span class="menu__dish-weight">₽ / 500 г.</span>
+            </div>
+
+            <button class="menu__dish-add" data-cart="add-dish"></button>
           </div>
         </div>
-      </header>
 
-      <main class="menu">
-        <div class="menu-container">
-          <div class="menu__dish menu__dish--1">
-            <div class="menu__dish-image">
-              <img
-                class="menu__dish-img menu__dish-image--img"
-                src="../images/menu/dish_1.svg"
-                alt="" />
-            </div>
-
-            <div class="menu__dish-about">
-              <h2 class="menu__dish-title menu__dish-title">
-                Устрицы по рокфеллеровски
-              </h2>
-
-              <p class="menu__dish-description menu__dish-description">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Eligendi maxime voluptas earum quisquam!
-              </p>
-            </div>
-
-            <div class="menu__dish-price">
-              <div class="menu__dish-params">
-                <span class="menu__dish-cost menu__dish-cost--1">700</span>
-                <span class="menu__dish-weight">₽ / 500 г.</span>
-              </div>
-
-              <button class="menu__dish-add"></button>
-            </div>
+        <div class="menu__dish menu__dish--2" data-id="02">
+          <div class="menu__dish-image">
+            <img
+              class="menu__dish-img menu__dish-image--img"
+              src="../images/menu/dish_2.svg"
+              alt="" />
           </div>
 
-          <div class="menu__dish menu__dish--2">
-            <div class="menu__dish-image">
-              <img
-                class="menu__dish-img menu__dish-image--img"
-                src="../images/menu/dish_2.svg"
-                alt="" />
-            </div>
+          <div class="menu__dish-about">
+            <h2 class="menu__dish-title menu__dish-title">
+              Свиные ребрышки на гриле с зеленью
+            </h2>
 
-            <div class="menu__dish-about">
-              <h2 class="menu__dish-title menu__dish-title">
-                Устрицы по рокфеллеровски
-              </h2>
-
-              <p class="menu__dish-description menu__dish-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                porro expedita adipisci inventore ducimus laboriosam, blandi
-              </p>
-            </div>
-
-            <div class="menu__dish-price">
-              <div class="menu__dish-params">
-                <span class="menu__dish-cost menu__dish-cost--2">900</span>
-                <span class="menu__dish-weight">₽ / 500 г.</span>
-              </div>
-
-              <button class="menu__dish-add"></button>
-            </div>
+            <p class="menu__dish-description menu__dish-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+              porro expedita adipisci inventore ducimus laboriosam, blandi
+            </p>
           </div>
 
-          <div class="menu__dish menu__dish--3">
-            <div class="menu__dish-image">
-              <img
-                class="menu__dish-img menu__dish-image--img"
-                src="../images/menu/dish_3.svg"
-                alt="" />
+          <div class="menu__dish-price">
+            <div class="menu__dish-params">
+              <span class="menu__dish-cost menu__dish-cost--2">900</span>
+              <span class="menu__dish-weight">₽ / 500 г.</span>
             </div>
 
-            <div class="menu__dish-about">
-              <h2 class="menu__dish-title menu__dish-title">
-                Устрицы по рокфеллеровски
-              </h2>
+            <button class="menu__dish-add" data-cart="add-dish"></button>
+          </div>
+        </div>
 
-              <p class="menu__dish-description menu__dish-description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam
-                ipsum molestias quos minus deserunt? Optio laudantium voluptates
-                non. Repudiandae, officia!
-              </p>
-            </div>
-
-            <div class="menu__dish-price">
-              <div class="menu__dish-params">
-                <span class="menu__dish-cost menu__dish-cost--3">520</span>
-                <span class="menu__dish-weight">₽ / 500 г.</span>
-              </div>
-
-              <button class="menu__dish-add"></button>
-            </div>
+        <div class="menu__dish menu__dish--3" data-id="03">
+          <div class="menu__dish-image">
+            <img
+              class="menu__dish-img menu__dish-image--img"
+              src="../images/menu/dish_3.svg"
+              alt="" />
           </div>
 
-          <div class="menu__dish menu__dish--4">
-            <div class="menu__dish-image">
-              <img
-                class="menu__dish-img menu__dish-image--img"
-                src="../images/menu/dish_1.svg"
-                alt="" />
-            </div>
+          <div class="menu__dish-about">
+            <h2 class="menu__dish-title menu__dish-title">
+              Креветки по-королевски в лимонном соке
+            </h2>
 
-            <div class="menu__dish-about">
-              <h2 class="menu__dish-title menu__dish-title">
-                Устрицы по рокфеллеровски
-              </h2>
-
-              <p class="menu__dish-description menu__dish-description">
-                Значимость этих проблем настолько очевидна, что укрепление и
-                развитие структуры
-              </p>
-            </div>
-
-            <div class="menu__dish-price">
-              <div class="menu__dish-params">
-                <span class="menu__dish-cost menu__dish-cost--4">450</span>
-                <span class="menu__dish-weight">₽ / 500 г.</span>
-              </div>
-
-              <button class="menu__dish-add"></button>
-            </div>
+            <p class="menu__dish-description menu__dish-description">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam
+              ipsum molestias quos minus deserunt?
+            </p>
           </div>
 
-          <div class="menu__dish menu__dish--5">
-            <div class="menu__dish-image">
-              <img
-                class="menu__dish-img menu__dish-image--img"
-                src="../images/menu/dish_2.svg"
-                alt="" />
+          <div class="menu__dish-price">
+            <div class="menu__dish-params">
+              <span class="menu__dish-cost menu__dish-cost--3">520</span>
+              <span class="menu__dish-weight">₽ / 500 г.</span>
             </div>
 
-            <div class="menu__dish-about">
-              <h2 class="menu__dish-title menu__dish-title">
-                Устрицы по рокфеллеровски
-              </h2>
+            <button class="menu__dish-add" data-cart="add-dish"></button>
+          </div>
+        </div>
 
-              <p class="menu__dish-description menu__dish-description">
-                Значимость этих проблем настолько очевидна, что укрепление и
-                развитие структуры
-              </p>
-            </div>
-
-            <div class="menu__dish-price">
-              <div class="menu__dish-params">
-                <span class="menu__dish-cost">270</span>
-                <span class="menu__dish-weight">₽ / 500 г.</span>
-              </div>
-
-              <button class="menu__dish-add"></button>
-            </div>
+        <div class="menu__dish menu__dish--4" data-id="04">
+          <div class="menu__dish-image">
+            <img
+              class="menu__dish-img menu__dish-image--img"
+              src="../images/menu/dish_1.svg"
+              alt="" />
           </div>
 
-          <div class="menu__dish menu__dish--6">
-            <div class="menu__dish-image">
-              <img
-                class="menu__dish-img menu__dish-image--img"
-                src="../images/menu/dish_3.svg"
-                alt="" />
-            </div>
+          <div class="menu__dish-about">
+            <h2 class="menu__dish-title menu__dish-title">Том-Ям</h2>
 
-            <div class="menu__dish-about">
-              <h2 class="menu__dish-title menu__dish-title">
-                Устрицы по рокфеллеровски
-              </h2>
-
-              <p class="menu__dish-description menu__dish-description">
-                Значимость этих проблем настолько очевидна, что укрепление и
-                развитие структуры
-              </p>
-            </div>
-
-            <div class="menu__dish-price">
-              <div class="menu__dish-params">
-                <span class="menu__dish-cost">700</span>
-                <span class="menu__dish-weight">₽ / 500 г.</span>
-              </div>
-
-              <button class="menu__dish-add"></button>
-            </div>
+            <p class="menu__dish-description menu__dish-description">
+              Значимость этих проблем настолько очевидна, что укрепление и
+              развитие структуры
+            </p>
           </div>
 
-          <div class="menu__dish menu__dish--7">
-            <div class="menu__dish-image">
-              <img
-                class="menu__dish-img menu__dish-image--img"
-                src="../images/menu/dish_1.svg"
-                alt="" />
+          <div class="menu__dish-price">
+            <div class="menu__dish-params">
+              <span class="menu__dish-cost menu__dish-cost--4">450</span>
+              <span class="menu__dish-weight">₽ / 500 г.</span>
             </div>
 
-            <div class="menu__dish-about">
-              <h2 class="menu__dish-title menu__dish-title">
-                Устрицы по рокфеллеровски
-              </h2>
+            <button class="menu__dish-add" data-cart="add-dish"></button>
+          </div>
+        </div>
 
-              <p class="menu__dish-description menu__dish-description">
-                Значимость этих проблем настолько очевидна, что укрепление и
-                развитие структуры
-              </p>
-            </div>
-
-            <div class="menu__dish-price">
-              <div class="menu__dish-params">
-                <span class="menu__dish-cost">470</span>
-                <span class="menu__dish-weight">₽ / 500 г.</span>
-              </div>
-
-              <button class="menu__dish-add"></button>
-            </div>
+        <div class="menu__dish menu__dish--5" data-id="05">
+          <div class="menu__dish-image">
+            <img
+              class="menu__dish-img menu__dish-image--img"
+              src="../images/menu/dish_2.svg"
+              alt="" />
           </div>
 
-          <div class="menu__dish menu__dish--8">
-            <div class="menu__dish-image">
-              <img
-                class="menu__dish-img menu__dish-image--img"
-                src="../images/menu/dish_2.svg"
-                alt="" />
-            </div>
+          <div class="menu__dish-about">
+            <h2 class="menu__dish-title menu__dish-title">Поке с лососем</h2>
 
-            <div class="menu__dish-about">
-              <h2 class="menu__dish-title menu__dish-title">
-                Устрицы по рокфеллеровски
-              </h2>
-
-              <p class="menu__dish-description menu__dish-description">
-                Значимость этих проблем настолько очевидна, что укрепление и
-                развитие структуры
-              </p>
-            </div>
-
-            <div class="menu__dish-price">
-              <div class="menu__dish-params">
-                <span class="menu__dish-cost">750</span>
-                <span class="menu__dish-weight">₽ / 500 г.</span>
-              </div>
-
-              <button class="menu__dish-add"></button>
-            </div>
+            <p class="menu__dish-description menu__dish-description">
+              Значимость этих проблем настолько очевидна, что укрепление и
+              развитие структуры
+            </p>
           </div>
 
-          <div class="menu__dish menu__dish--9">
-            <div class="menu__dish-image">
-              <img
-                class="menu__dish-img menu__dish-image--img"
-                src="../images/menu/dish_1.svg"
-                alt="" />
+          <div class="menu__dish-price">
+            <div class="menu__dish-params">
+              <span class="menu__dish-cost">270</span>
+              <span class="menu__dish-weight">₽ / 500 г.</span>
             </div>
 
-            <div class="menu__dish-about">
-              <h2 class="menu__dish-title menu__dish-title">
-                Устрицы по рокфеллеровски
-              </h2>
+            <button class="menu__dish-add" data-cart="add-dish"></button>
+          </div>
+        </div>
 
-              <p class="menu__dish-description menu__dish-description">
-                Значимость этих проблем настолько очевидна, что укрепление и
-                развитие структуры
-              </p>
-            </div>
-
-            <div class="menu__dish-price">
-              <div class="menu__dish-params">
-                <span class="menu__dish-cost">800</span>
-                <span class="menu__dish-weight">₽ / 500 г.</span>
-              </div>
-
-              <button class="menu__dish-add"></button>
-            </div>
+        <div class="menu__dish menu__dish--6" data-id="06">
+          <div class="menu__dish-image">
+            <img
+              class="menu__dish-img menu__dish-image--img"
+              src="../images/menu/dish_3.svg"
+              alt="" />
           </div>
 
-          <div class="menu__dish menu__dish--10">
-            <div class="menu__dish-image">
-              <img
-                class="menu__dish-img menu__dish-image--img"
-                src="../images/menu/dish_2.svg"
-                alt="" />
-            </div>
+          <div class="menu__dish-about">
+            <h2 class="menu__dish-title menu__dish-title">Рамен</h2>
 
-            <div class="menu__dish-about">
-              <h2 class="menu__dish-title menu__dish-title">
-                Устрицы по рокфеллеровски
-              </h2>
-
-              <p class="menu__dish-description menu__dish-description">
-                Значимость этих проблем настолько очевидна, что укрепление и
-                развитие структуры
-              </p>
-            </div>
-
-            <div class="menu__dish-price">
-              <div class="menu__dish-params">
-                <span class="menu__dish-cost">900</span>
-                <span class="menu__dish-weight">₽ / 500 г.</span>
-              </div>
-
-              <button class="menu__dish-add"></button>
-            </div>
+            <p class="menu__dish-description menu__dish-description">
+              Значимость этих проблем настолько очевидна, что укрепление и
+              развитие структуры
+            </p>
           </div>
 
-          <div class="menu__dish menu__dish--11">
-            <div class="menu__dish-image">
-              <img
-                class="menu__dish-img menu__dish-image--img"
-                src="../images/menu/dish_3.svg"
-                alt="" />
+          <div class="menu__dish-price">
+            <div class="menu__dish-params">
+              <span class="menu__dish-cost">700</span>
+              <span class="menu__dish-weight">₽ / 500 г.</span>
             </div>
 
-            <div class="menu__dish-about">
-              <h2 class="menu__dish-title menu__dish-title">
-                Устрицы по рокфеллеровски
-              </h2>
+            <button class="menu__dish-add" data-cart="add-dish"></button>
+          </div>
+        </div>
 
-              <p class="menu__dish-description menu__dish-description">
-                Значимость этих проблем настолько очевидна, что укрепление и
-                развитие структуры
-              </p>
-            </div>
-
-            <div class="menu__dish-price">
-              <div class="menu__dish-params">
-                <span class="menu__dish-cost">550</span>
-                <span class="menu__dish-weight">₽ / 500 г.</span>
-              </div>
-
-              <button class="menu__dish-add"></button>
-            </div>
+        <div class="menu__dish menu__dish--7" data-id="07">
+          <div class="menu__dish-image">
+            <img
+              class="menu__dish-img menu__dish-image--img"
+              src="../images/menu/dish_1.svg"
+              alt="" />
           </div>
 
-          <div class="menu__dish menu__dish--12">
-            <div class="menu__dish-image">
-              <img
-                class="menu__dish-img menu__dish-image--img"
-                src="../images/menu/dish_1.svg"
-                alt="" />
-            </div>
+          <div class="menu__dish-about">
+            <h2 class="menu__dish-title menu__dish-title">Салат Цезарь</h2>
 
-            <div class="menu__dish-about">
-              <h2 class="menu__dish-title menu__dish-title">
-                Устрицы по рокфеллеровски
-              </h2>
-
-              <p class="menu__dish-description menu__dish-description">
-                Значимость этих проблем настолько очевидна, что укрепление и
-                развитие структуры
-              </p>
-            </div>
-
-            <div class="menu__dish-price">
-              <div class="menu__dish-params">
-                <span class="menu__dish-cost">1100</span>
-                <span class="menu__dish-weight">₽ / 500 г.</span>
-              </div>
-
-              <button class="menu__dish-add"></button>
-            </div>
+            <p class="menu__dish-description menu__dish-description">
+              Значимость этих проблем настолько очевидна, что укрепление и
+              развитие структуры
+            </p>
           </div>
 
-          <div class="menu__dish menu__dish--13">
-            <div class="menu__dish-image">
-              <img
-                class="menu__dish-img menu__dish-image--img"
-                src="../images/menu/dish_2.svg"
-                alt="" />
+          <div class="menu__dish-price">
+            <div class="menu__dish-params">
+              <span class="menu__dish-cost">470</span>
+              <span class="menu__dish-weight">₽ / 500 г.</span>
             </div>
 
-            <div class="menu__dish-about">
-              <h2 class="menu__dish-title menu__dish-title">
-                Устрицы по рокфеллеровски
-              </h2>
+            <button class="menu__dish-add" data-cart="add-dish"></button>
+          </div>
+        </div>
 
-              <p class="menu__dish-description menu__dish-description">
-                Значимость этих проблем настолько очевидна, что укрепление и
-                развитие структуры
-              </p>
-            </div>
-
-            <div class="menu__dish-price">
-              <div class="menu__dish-params">
-                <span class="menu__dish-cost">630 </span>
-                <span class="menu__dish-weight">₽ / 500 г.</span>
-              </div>
-
-              <button class="menu__dish-add"></button>
-            </div>
+        <div class="menu__dish menu__dish--8" data-id="08">
+          <div class="menu__dish-image">
+            <img
+              class="menu__dish-img menu__dish-image--img"
+              src="../images/menu/dish_2.svg"
+              alt="" />
           </div>
 
-          <div class="menu__dish menu__dish--14">
-            <div class="menu__dish-image">
-              <img
-                class="menu__dish-img menu__dish-image--img"
-                src="../images/menu/dish_3.svg"
-                alt="" />
-            </div>
+          <div class="menu__dish-about">
+            <h2 class="menu__dish-title menu__dish-title">
+              Устрицы по рокфеллеровски
+            </h2>
 
-            <div class="menu__dish-about">
-              <h2 class="menu__dish-title menu__dish-title">
-                Устрицы по рокфеллеровски
-              </h2>
-
-              <p class="menu__dish-description menu__dish-description">
-                Значимость этих проблем настолько очевидна, что укрепление и
-                развитие структуры
-              </p>
-            </div>
-
-            <div class="menu__dish-price">
-              <div class="menu__dish-params">
-                <span class="menu__dish-cost">690</span>
-                <span class="menu__dish-weight">₽ / 500 г.</span>
-              </div>
-
-              <button class="menu__dish-add"></button>
-            </div>
+            <p class="menu__dish-description menu__dish-description">
+              Значимость этих проблем настолько очевидна, что укрепление и
+              развитие структуры
+            </p>
           </div>
 
-          <div class="menu__dish menu__dish--15">
-            <div class="menu__dish-image">
-              <img
-                class="menu__dish-img menu__dish-image--img"
-                src="../images/menu/dish_1.svg"
-                alt="" />
+          <div class="menu__dish-price">
+            <div class="menu__dish-params">
+              <span class="menu__dish-cost">750</span>
+              <span class="menu__dish-weight">₽ / 500 г.</span>
             </div>
 
-            <div class="menu__dish-about">
-              <h2 class="menu__dish-title menu__dish-title">
-                Устрицы по рокфеллеровски
-              </h2>
+            <button class="menu__dish-add" data-cart="add-dish"></button>
+          </div>
+        </div>
 
-              <p class="menu__dish-description menu__dish-description">
-                Значимость этих проблем настолько очевидна, что укрепление и
-                развитие структуры
-              </p>
-            </div>
-
-            <div class="menu__dish-price">
-              <div class="menu__dish-params">
-                <span class="menu__dish-cost">700</span>
-                <span class="menu__dish-weight">₽ / 500 г.</span>
-              </div>
-
-              <button class="menu__dish-add"></button>
-            </div>
+        <div class="menu__dish menu__dish--9" data-id="09">
+          <div class="menu__dish-image">
+            <img
+              class="menu__dish-img menu__dish-image--img"
+              src="../images/menu/dish_1.svg"
+              alt="" />
           </div>
 
-          <div class="menu__dish menu__dish--16">
-            <div class="menu__dish-image">
-              <img
-                class="menu__dish-img menu__dish-image--img"
-                src="../images/menu/dish_2.svg"
-                alt="" />
+          <div class="menu__dish-about">
+            <h2 class="menu__dish-title menu__dish-title">
+              Устрицы по рокфеллеровски
+            </h2>
+
+            <p class="menu__dish-description menu__dish-description">
+              Значимость этих проблем настолько очевидна, что укрепление и
+              развитие структуры
+            </p>
+          </div>
+
+          <div class="menu__dish-price">
+            <div class="menu__dish-params">
+              <span class="menu__dish-cost">800</span>
+              <span class="menu__dish-weight">₽ / 500 г.</span>
             </div>
 
-            <div class="menu__dish-about">
-              <h2 class="menu__dish-title menu__dish-title">
-                Устрицы по рокфеллеровски
-              </h2>
+            <button class="menu__dish-add" data-cart="add-dish"></button>
+          </div>
+        </div>
 
-              <p class="menu__dish-description menu__dish-description">
-                Значимость этих проблем настолько очевидна, что укрепление и
-                развитие структуры
-              </p>
+        <div class="menu__dish menu__dish--10" data-id="10">
+          <div class="menu__dish-image">
+            <img
+              class="menu__dish-img menu__dish-image--img"
+              src="../images/menu/dish_2.svg"
+              alt="" />
+          </div>
+
+          <div class="menu__dish-about">
+            <h2 class="menu__dish-title menu__dish-title">
+              Устрицы по рокфеллеровски
+            </h2>
+
+            <p class="menu__dish-description menu__dish-description">
+              Значимость этих проблем настолько очевидна, что укрепление и
+              развитие структуры
+            </p>
+          </div>
+
+          <div class="menu__dish-price">
+            <div class="menu__dish-params">
+              <span class="menu__dish-cost">900</span>
+              <span class="menu__dish-weight">₽ / 500 г.</span>
             </div>
 
-            <div class="menu__dish-price">
-              <div class="menu__dish-params">
-                <span class="menu__dish-cost">590</span>
-                <span class="menu__dish-weight">₽ / 500 г.</span>
+            <button class="menu__dish-add" data-cart="add-dish"></button>
+          </div>
+        </div>
+
+        <div class="menu__dish menu__dish--11" data-id="11">
+          <div class="menu__dish-image">
+            <img
+              class="menu__dish-img menu__dish-image--img"
+              src="../images/menu/dish_3.svg"
+              alt="" />
+          </div>
+
+          <div class="menu__dish-about">
+            <h2 class="menu__dish-title menu__dish-title">
+              Устрицы по рокфеллеровски
+            </h2>
+
+            <p class="menu__dish-description menu__dish-description">
+              Значимость этих проблем настолько очевидна, что укрепление и
+              развитие структуры
+            </p>
+          </div>
+
+          <div class="menu__dish-price">
+            <div class="menu__dish-params">
+              <span class="menu__dish-cost">550</span>
+              <span class="menu__dish-weight">₽ / 500 г.</span>
+            </div>
+
+            <button class="menu__dish-add" data-cart="add-dish"></button>
+          </div>
+        </div>
+
+        <div class="menu__dish menu__dish--12" data-id="12">
+          <div class="menu__dish-image">
+            <img
+              class="menu__dish-img menu__dish-image--img"
+              src="../images/menu/dish_1.svg"
+              alt="" />
+          </div>
+
+          <div class="menu__dish-about">
+            <h2 class="menu__dish-title menu__dish-title">
+              Устрицы по рокфеллеровски
+            </h2>
+
+            <p class="menu__dish-description menu__dish-description">
+              Значимость этих проблем настолько очевидна, что укрепление и
+              развитие структуры
+            </p>
+          </div>
+
+          <div class="menu__dish-price">
+            <div class="menu__dish-params">
+              <span class="menu__dish-cost">1100</span>
+              <span class="menu__dish-weight">₽ / 500 г.</span>
+            </div>
+
+            <button class="menu__dish-add" data-cart="add-dish"></button>
+          </div>
+        </div>
+
+        <div class="menu__dish menu__dish--13" data-id="13">
+          <div class="menu__dish-image">
+            <img
+              class="menu__dish-img menu__dish-image--img"
+              src="../images/menu/dish_2.svg"
+              alt="" />
+          </div>
+
+          <div class="menu__dish-about">
+            <h2 class="menu__dish-title menu__dish-title">
+              Устрицы по рокфеллеровски
+            </h2>
+
+            <p class="menu__dish-description menu__dish-description">
+              Значимость этих проблем настолько очевидна, что укрепление и
+              развитие структуры
+            </p>
+          </div>
+
+          <div class="menu__dish-price">
+            <div class="menu__dish-params">
+              <span class="menu__dish-cost">630 </span>
+              <span class="menu__dish-weight">₽ / 500 г.</span>
+            </div>
+
+            <button class="menu__dish-add" data-cart="add-dish"></button>
+          </div>
+        </div>
+
+        <div class="menu__dish menu__dish--14" data-id="14">
+          <div class="menu__dish-image">
+            <img
+              class="menu__dish-img menu__dish-image--img"
+              src="../images/menu/dish_3.svg"
+              alt="" />
+          </div>
+
+          <div class="menu__dish-about">
+            <h2 class="menu__dish-title menu__dish-title">
+              Устрицы по рокфеллеровски
+            </h2>
+
+            <p class="menu__dish-description menu__dish-description">
+              Значимость этих проблем настолько очевидна, что укрепление и
+              развитие структуры
+            </p>
+          </div>
+
+          <div class="menu__dish-price">
+            <div class="menu__dish-params">
+              <span class="menu__dish-cost">690</span>
+              <span class="menu__dish-weight">₽ / 500 г.</span>
+            </div>
+
+            <button class="menu__dish-add" data-cart="add-dish"></button>
+          </div>
+        </div>
+
+        <div class="menu__dish menu__dish--15" data-id="15">
+          <div class="menu__dish-image">
+            <img
+              class="menu__dish-img menu__dish-image--img"
+              src="../images/menu/dish_1.svg"
+              alt="" />
+          </div>
+
+          <div class="menu__dish-about">
+            <h2 class="menu__dish-title menu__dish-title">
+              Устрицы по рокфеллеровски
+            </h2>
+
+            <p class="menu__dish-description menu__dish-description">
+              Значимость этих проблем настолько очевидна, что укрепление и
+              развитие структуры
+            </p>
+          </div>
+
+          <div class="menu__dish-price">
+            <div class="menu__dish-params">
+              <span class="menu__dish-cost">700</span>
+              <span class="menu__dish-weight">₽ / 500 г.</span>
+            </div>
+
+            <button class="menu__dish-add" data-cart="add-dish"></button>
+          </div>
+        </div>
+
+        <div class="menu__dish menu__dish--16" data-id="16">
+          <div class="menu__dish-image">
+            <img
+              class="menu__dish-img menu__dish-image--img"
+              src="../images/menu/dish_2.svg"
+              alt="" />
+          </div>
+
+          <div class="menu__dish-about">
+            <h2 class="menu__dish-title menu__dish-title">
+              Устрицы по рокфеллеровски
+            </h2>
+
+            <p class="menu__dish-description menu__dish-description">
+              Значимость этих проблем настолько очевидна, что укрепление и
+              развитие структуры
+            </p>
+          </div>
+
+          <div class="menu__dish-price">
+            <div class="menu__dish-params">
+              <span class="menu__dish-cost">590</span>
+              <span class="menu__dish-weight">₽ / 500 г.</span>
+            </div>
+
+            <button class="menu__dish-add" data-cart="add-dish"></button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!--______________________ Окно блюда _______________________________-->
+    <div class="info">
+      <div class="info-container">
+        <div class="info-main">
+          <img
+            class="info-main__dish-img"
+            src="/images/menu/dish_2.svg"
+            alt="" />
+
+          <div class="info-dish">
+            <h2 class="info-dish__title">Свиные ребрышки на гриле</h2>
+            <p class="info-dish__description">
+              Не следует, однако забывать, что консультация с широким активом
+              представляет собой интересный эксперимент проверки новых
+              предложений. Не следует, однако забывать, что сложившаяся
+              структура организации позволяет оценить значение новых
+              предложений. Разнообразный и богатый опыт начало повседневной
+              работы по формированию позиции требуют от нас анализа позиций.Не
+              следует, однако забывать, что консультация с широким активом
+              представляет собой интересный эксперимент проверки новых
+              предложений. Не следует, однако забывать, что сложившаяся
+              структура организации позволяет оценить значение новых
+              предложений.
+            </p>
+
+            <div class="info-dish__order">
+              <div class="info-dish__params">
+                <span class="info-dish__cost">1 600 ₽</span>
+                <span class="info-dish__weight"> / 750 г.</span>
               </div>
-
-              <button class="menu__dish-add"></button>
+              <button class="info-dish__add-btn">В корзину</button>
             </div>
           </div>
         </div>
-      </main>
+      </div>
     </div>
 
-    <script src="/scripts/components/menu.js"></script>
+    <!-- _____________________Страница корзины______________________________ -->
+    <div class="basket">
+      <div class="basket-container">
+        <div class="basket-list"></div>
+
+        <hr class="line" />
+        <footer class="basket-order">
+          <div class="basket-order__cost">
+            <span class="basket-order__title">Заказ на сумму:</span>
+            <span class="basket-order__sum"></span>
+            <span class="basket-order__sum-rubles">₽</span>
+          </div>
+
+          <button class="basket-order__btn-order">Оформить заказ</button>
+        </footer>
+      </div>
+    </div>
+
+    <script src="/scripts/components/newLogic.js"></script>
+    <script src="/scripts/components/page-switcher.js"></script>
+
+    <!-- <script src="/scripts/components/counter.js"></script>
+    <script src="/scripts/components/dish-info.js"></script>
+    <script src="/scripts/components/basket.js"></script> -->
   </body>
 </html>
