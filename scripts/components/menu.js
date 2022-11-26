@@ -231,7 +231,6 @@ const amountCounter = () => {
       ++dishCounter.innerHTML;
     }
   });
-
   // const dishSumCounter = document.querySelector(".main-header__sum-cost");
   // const dishCost = document.querySelector(".menu__dish-cost");
 
