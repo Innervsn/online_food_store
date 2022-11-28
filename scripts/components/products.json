@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "imgSrc": "images/menu/dish_1.svg",
+    "title": "Устрицы по рокфеллеровски",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi maxime voluptas earum qm!i",
+    "price": 700,
+    "weight": "₽ / 500 г."
+  },
+  {
+    "imgSrc": "images/menu/dish_2.svg",
+    "title": "Свиные ребрышки на гриле с зеленью",
+    "description": "Lorem ipsum dolor sit amet cour adipisicing elit. Illo porro expedita adipisci inventore ducimus i",
+    "price": 600,
+    "weight": "₽ / 750 г.",
+    "id": 2
+  },
+  {
+    "imgSrc": "images/menu/dish_3.svg",
+    "title": "Креветки по-королевски в лимонном соке",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicinm molestias quos minus deserunt? Optio ltates no!",
+    "price": 820,
+    "weight": "₽ / 7 шт.",
+    "id": 3
+  },
+  {
+    "imgSrc": "images/menu/dish_4.png",
+    "title": "Стейк",
+    "description": "Lorem ipsum dolor sit amesectetur, adipisicing elit. Eligendi maxime voluptas earum quisquam!i",
+    "price": 270,
+    "weight": "₽ / 500 г.",
+    "id": 4
+  },
+  {
+    "imgSrc": "images/menu/dish_5.png",
+    "title": "Том-Ям",
+    "description": "Lorem ipsum dolor sit amet consadipisicing elit. Eligendi maxime voluptas earum quisquam!i",
+    "price": 750,
+    "weight": "₽ / 500 г.",
+    "id": 5
+  },
+  {
+    "imgSrc": "images/menu/dish_6.png",
+    "title": "Рамен",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo porro expedita adipisci inventore duclandi",
+    "price": 600,
+    "weight": "₽ / 750 г.",
+    "id": 6
+  },
+  {
+    "imgSrc": "images/menu/dish_7.png",
+    "title": "Салат Цезарь",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam ipsum molestias quos minus deseru, officia!",
+    "price": 820,
+    "weight": "₽ / 7 шт.",
+    "id": 7
+  },
+  {
+    "imgSrc": "images/menu/dish_8.png",
+    "title": "Набор роллов",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi maxime voluptas earum quim!i",
+    "price": 700,
+    "weight": "₽ / 500 г.",
+    "id": 8
+  },
+  {
+    "imgSrc": "images/menu/dish_9.png",
+    "title": "Пицца",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi maxime voluptas earum qu!i",
+    "price": 450,
+    "weight": "₽ / 500 г.",
+    "id": 9
+  },
+  {
+    "imgSrc": "images/menu/dish_10.png",
+    "title": "Рамен 2",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo porro expedita adipisci inventore ducimundi",
+    "price": 590,
+    "weight": "₽ / 750 г.",
+    "id": 10
+  },
+  {
+    "imgSrc": "images/menu/dish_11.png",
+    "title": "Лапша",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam ipsum molestias quos minus deserunt?, officia!",
+    "price": 420,
+    "weight": "₽ / 7 шт.",
+    "id": 11
+  },
+  {
+    "imgSrc": "images/menu/dish_12.png",
+    "title": "Хинкали",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi maxime voluptas earum quam!i",
+    "price": 550,
+    "weight": "₽ / 500 г.",
+    "id": 12
+  },
+  {
+    "imgSrc": "images/menu/dish_13.png",
+    "title": "Пицца 3",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi maxime voluptas earum qu!i",
+    "price": 790,
+    "weight": "₽ / 500 г.",
+    "id": 13
+  },
+  {
+    "imgSrc": "images/menu/dish_14.png",
+    "title": "Паста Карбонара",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo porro expedita adipisci inventore ducandi",
+    "price": 630,
+    "weight": "₽ / 750 г.",
+    "id": 14
+  },
+  {
+    "imgSrc": "images/menu/dish_15.png",
+    "title": "Набор Роллов 2",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam ipsum molestias quos minus  voluecia!",
+    "price": 420,
+    "weight": "₽ / 7 шт.",
+    "id": 15
+  },
+  {
+    "imgSrc": "images/menu/dish_16.png",
+    "title": "Пицца 4",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi maxime voluptas earum quisquam!i",
+    "price": 490,
+    "weight": "₽ / 500 г.",
+    "id": 16
+  }
+]
