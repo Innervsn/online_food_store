@@ -1,10 +1,17 @@
+// .body-basket {
+//   display: none;
+//   background-image: url(/images/dish-info/dish-info_bg.jpg);
+// }
+
 .body-menu {
+  margin: 0;
+  display: block;
   background: #161516;
 }
 
 .header {
-  margin: 35px 0 75px;
-  padding-top: 10px;
+  // margin: 25px 0 55px;
+  padding: 20px 0px;
   background: #161516;
   position: sticky;
   z-index: 3;
@@ -66,6 +73,8 @@
   }
 
   &__amount-number {
+    // display: inline-block;
+    // width: 25px;
     font-family: "Montserrat-Medium", sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -76,6 +85,8 @@
   }
 
   &__amount-text {
+    // display: inline-block;
+    // width: 80px;
     padding-left: 5px;
     font-family: "Montserrat-Medium", sans-serif;
     font-style: normal;
@@ -97,7 +108,9 @@
   }
 
   &__sum-cost {
-    padding-left: 8px;
+    display: inline-block;
+    width: 55px;
+    // padding-left: 8px;
     font-family: "Montserrat-Medium", sans-serif;
     font-style: normal;
     font-weight: 500;

@@ -1,6 +1,32 @@
+const sumCounter = () => {
+  const dishCards = document.querySelectorAll(".basket-dish"); // блюдо в корзине
+  const totalPriceInHeader = document.querySelector(".header__sum-cost");
+  const totalPriceInBasket = document.querySelector(".basket-order__sum");
+  let totalPrice = 0; // устанавливаем значение счетчика
+
+  dishCards.forEach(function (dish) {
+    //прохожимся по каждому блюду
+    const dishSumCounter = dish.querySelector(".basket-dish__amount-number"); // счетчик кол-ва в карточке в корзине
+    const dishCost = dish.querySelector(".basket-dish__price"); // цена блюда
+    const dishCardSum =
+      parseInt(dishSumCounter.innerText) * parseInt(dishCost.innerText); // сумма одного блюда
+
+    totalPrice += dishCardSum; // прибавляем к счетчику сумму ожного блюда
+  });
+
+  totalPriceInHeader.innerText = totalPrice; // передаем значение счетчика в счтечик header HTML
+  totalPriceInBasket.innerText = totalPrice; // передаем значение счетчика в счтечик basket HTML
+};
+
+sumCounter();
+
 // Добавление товара в корзину
 const basketDishCounter = () => {
   const basketList = document.querySelector(".basket-list"); // обертка списка товара куда будут добавляться товары в корзине
+  let counterInHeader = document.querySelector(".header__amount-number"); // Счетчик в header
+  let counterInBasket = document.querySelector(".basket-dish__amount-number"); // счетчик в корзине
+  let headerCounter = 0;
+  counterInHeader.innerHTML = headerCounter;
 
   window.addEventListener("click", (e) => {
     if (e.target.classList.contains("menu__dish-add")) {
@@ -56,12 +82,13 @@ const basketDishCounter = () => {
 
         basketList.insertAdjacentHTML("beforeend", cartHTML);
       }
+
+      basketStatus(); // статус корзины (пустая/полная)
+      sumCounter();
     }
 
     // _______________________________________________
     // Изменение кол-ва добавленного товара в корзине
-    let counterInHeader = document.querySelector(".header__amount-number"); // Счетчик в header
-    let counterInBasket = document.querySelector(".basket-dish__amount-number"); // счетчик в корзине
 
     if (
       //клик по кнопке (+) или (-) в карточке товара в корзине
@@ -82,12 +109,14 @@ const basketDishCounter = () => {
 
       if (parseInt(counterInBasket.innerText) > 1) {
         counterInBasket.innerText == --counterInBasket.innerText; // уменьшение кол-ва, но не меньше 1
-      } 
-      
-      else if (  // удаление из корзины при нажатии на кнопку (-) полсе того как счетчик уже опустился до 1 
+      } else if (
+        // удаление из корзины при нажатии на кнопку (-) полсе того как счетчик уже опустился до 1
         e.target.closest(".basket-list")
       ) {
         e.target.closest(".basket-dish").remove();
+
+        basketStatus(); // статус корзины (пустая/полная)
+        sumCounter();
       }
     }
 
@@ -102,6 +131,8 @@ const basketDishCounter = () => {
           counterInHeader.innerText - counterInBasket.innerText; // отнимаем из общего счетчика кол-во блюд в удаляемой карточке
 
         e.target.closest(".basket-dish").remove(); // удаляем карточку
+        basketStatus(); // статус корзины (пустая/полная)
+        sumCounter();
       }
     }
 
@@ -112,11 +143,15 @@ const basketDishCounter = () => {
       e.target.classList.contains("menu__dish-add")
     ) {
       ++counterInHeader.innerText; // увеличение кол-ва
+      sumCounter();
+      // textSwitcher();
     }
 
     if (e.target.classList.contains("basket-dish__minus")) {
       if (parseInt(counterInHeader.innerText) > 0) {
         --counterInHeader.innerText; // уменьшение кол-ва, но не меньше 1
+        sumCounter();
+        // textSwitcher();
       }
     }
   });
@@ -147,3 +182,5 @@ basketDishCounter();
 // let counts = document.querySelectorAll(".menu__dish");
 // counts.forEach(addHandlers);
 // // _________________________________________________________________
+
+// // ____________________Счетчик Суммы (еще один)_______________________
