@@ -6,6 +6,8 @@ const basketStatus = () => {
     basketListStatus.style.display = "none";
   } else {
     basketListStatus.style.display = "block";
+    // localStorage.clear();
+    localStorage.clear("cartHTML");
   }
 };
 

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body class="info-body">
+    <header class="info-header">
+      <div class="header-container">
+        <button class="info-header__btn-back"></button>
+        <h1 class="info-header__title">наша продукция</h1>
+        <h1 class="info-header__title header__title--basket">
+          Корзина с выбранными товарами
+        </h1>
+
+        <div class="info-header__right-block">
+          <div class="info-header__basket">
+            <div class="info-header__list">
+              <div class="info-header__amount">
+                <span class="info-header__amount-number" data-counter></span>
+                <span class="info-header__amount-text">товаров</span>
+              </div>
+
+              <div class="info-header__sum">
+                <span class="info-header__sum-text">на сумму</span>
+                <span class="info-header__sum-cost"></span>
+                <span class="info-header__rubles">₽</span>
+              </div>
+            </div>
+
+            <a class="info-header__basket-link">
+              <img
+                class="info-header__basket-link--img"
+                src="/images/menu/basket_btn_img.svg"
+                alt="" />
+            </a>
+          </div>
+
+          <button class="header__logout-btn">Выйти</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="info">
+      <div class="info-container"></div>
+    </div>
+
+    <script src="/scripts/components/dishPage.js"></script>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 const menuList = () => {
   const menuContainer = document.querySelector(".menu-container");
   getDish();
-  
+
   async function getDish() {
     const response = await fetch("./scripts/components/products.json");
 
