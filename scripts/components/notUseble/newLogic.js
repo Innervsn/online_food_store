@@ -5,17 +5,27 @@ const sumCounter = () => {
   let totalPrice = 0; // устанавливаем значение счетчика
 
   dishCards.forEach(function (dish) {
-    //прохожимся по каждому блюду
+    //проходимся по каждому блюду
     const dishSumCounter = dish.querySelector(".basket-dish__amount-number"); // счетчик кол-ва в карточке в корзине
     const dishCost = dish.querySelector(".basket-dish__price"); // цена блюда
     const dishCardSum =
       parseInt(dishSumCounter.innerText) * parseInt(dishCost.innerText); // сумма одного блюда
 
-    totalPrice += dishCardSum; // прибавляем к счетчику сумму ожного блюда
+    totalPrice += dishCardSum; // прибавляем к счетчику сумму одного блюда
   });
 
   totalPriceInHeader.innerText = totalPrice; // передаем значение счетчика в счтечик header HTML
   totalPriceInBasket.innerText = totalPrice; // передаем значение счетчика в счтечик basket HTML
+
+  localStorage.setItem(
+    "totalPriceInBasket",
+    JSON.stringify(totalPriceInBasket.innerText)
+  );
+
+  localStorage.setItem(
+    "totalPriceInHeader",
+    JSON.stringify(totalPriceInHeader.innerText)
+  );
 };
 
 sumCounter();
@@ -26,7 +36,7 @@ const basketDishCounter = () => {
   let counterInHeader = document.querySelector(".header__amount-number"); // Счетчик в header
   let counterInBasket = document.querySelector(".basket-dish__amount-number"); // счетчик в корзине
   let headerCounter = 0;
-  counterInHeader.innerHTML = headerCounter;
+  counterInHeader.innerText = headerCounter;
 
   window.addEventListener("click", (e) => {
     if (e.target.classList.contains("menu__dish-add")) {
@@ -54,37 +64,39 @@ const basketDishCounter = () => {
           ".basket-dish__amount-number"
         );
         ++counterElement.innerText;
+        // localStorage.setItem("counterElement", JSON.stringify(counterElement));
       } else {
         // если не добавлено то добавляем блюдо в корзину
         const cartHTML = `
               <div class="basket-dish" data-id="${productInfo.id}">
-                <div class="basket-dish__left-block">
-                  <img
-                    class="basket-dish__img"
-                    src="${productInfo.imgSrc}"
+              <div class="basket-dish__left-block">
+              <img
+              class="basket-dish__img"
+              src="${productInfo.imgSrc}"
                     alt="" />
 
-                  <span class="basket-dish__title">${productInfo.title}</span>
-                </div>
+                    <span class="basket-dish__title">${productInfo.title}</span>
+                    </div>
 
-                <div class="basket-dish__right-block">
-                  <button class="basket-dish__plus" data-action="plus-dish"></button>
-                  <span class="basket-dish__amount-number">${productInfo.amount}</span>
-                  <span class="basket-dish__unit">шт.</span>
-                  <button class="basket-dish__minus" data-action="add-minus"></button>
-                  <span class="basket-dish__price-text">сумма:</span>
-                  <span class="basket-dish__price">${productInfo.price}</span>
+                    <div class="basket-dish__right-block">
+                    <button class="basket-dish__plus" data-action="plus-dish"></button>
+                    <span class="basket-dish__amount-number">${productInfo.amount}</span>
+                    <span class="basket-dish__unit">шт.</span>
+                    <button class="basket-dish__minus" data-action="add-minus"></button>
+                    <span class="basket-dish__price-text">сумма:</span>
+                    <span class="basket-dish__price">${productInfo.price}</span>
                   <span class="basket-dish__rubles">₽</span>
                   <button class="basket-dish__btn-del"></button>
-                </div>
+                  </div>
               </div>
               `;
 
-        basketList.insertAdjacentHTML("beforeend", cartHTML);
+              // localStorage.setItem("cartHTML", JSON.stringify(cartHTML));
+              basketList.insertAdjacentHTML("beforeend", cartHTML);
       }
 
-      basketStatus(); // статус корзины (пустая/полная)
-      sumCounter();
+      // basketStatus(); // статус корзины (пустая/полная)
+      // sumCounter();
     }
 
     // _______________________________________________
@@ -115,8 +127,8 @@ const basketDishCounter = () => {
       ) {
         e.target.closest(".basket-dish").remove();
 
-        basketStatus(); // статус корзины (пустая/полная)
-        sumCounter();
+        // basketStatus(); // статус корзины (пустая/полная)
+        // sumCounter();
       }
     }
 
@@ -154,33 +166,11 @@ const basketDishCounter = () => {
         // textSwitcher();
       }
     }
+    localStorage.setItem(
+      "headerCounter",
+      JSON.stringify(counterInHeader.innerText)
+    );
   });
 };
 
 basketDishCounter();
-
-// // ____________________Счетчик Суммы_______________________
-// function addHandlers(dish) {
-//   const dishCost = dish.querySelector(".menu__dish-cost");
-//   const addBtn = dish.querySelector(".menu__dish-add");
-//   const dishSumCounter = document.querySelector(".header__sum-cost");
-//   // const dishBasketSumCounter = document.querySelector(".basket-order__sum"); // досутп к полю counter(сумме) в корзине
-
-//   let sum = 0;
-
-//   dishSumCounter.innerHTML = sum;
-//   // dishBasketSumCounter.innerText = sum; //  сумма в корзине
-
-//   addBtn.addEventListener("click", function () {
-//     dishSumCounter.innerHTML =
-//       Number(dishSumCounter.innerHTML) + Number(dishCost.innerHTML);
-//     // dishBasketSumCounter.innerText =
-//     //   Number(dishBasketSumCounter.innerHTML) + Number(dishCost.innerHTML); // увеличение суммы в корзине
-//   });
-// }
-
-// let counts = document.querySelectorAll(".menu__dish");
-// counts.forEach(addHandlers);
-// // _________________________________________________________________
-
-// // ____________________Счетчик Суммы (еще один)_______________________

@@ -1,5 +1,10 @@
+.basket-body {
+  margin: 0;
+  background: #161516;
+}
+
 .basket {
-  display: none;
+  // display: none;
 
   &-container {
     max-width: 1300px;
@@ -360,7 +365,7 @@
 }
 
 .line {
-  display: none;
+  // display: none;
   margin: -10px 0px 0px 0px;
   width: 100%;
   border-color: #d58c51;
