@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/style.css" />
     <title>Document</title>
   </head>
-  <body class="body-menu body-info body-basket">
+  <body class="body">
     <header class="header">
       <div class="header-container">
         <button class="header__btn-back"></button>
@@ -17,6 +17,7 @@
         </h1>
 
         <div class="header__right-block">
+          <input class="header__search" type="text" />
           <div class="header__basket">
             <div class="header__list">
               <div class="header__amount">
@@ -45,12 +46,12 @@
     </header>
 
     <main class="menu">
-      <div class="menu-container"></div>
+      <div class="menu-container">
+        <div class="info"></div>
+      </div>
     </main>
 
     <!-- модальное окно -->
-
-    <!-- <div></div> -->
 
     <!--______________________ Окно блюда _______________________________-->
     <!-- <div class="info">
@@ -88,7 +89,7 @@
         </div>
       </div>
     </div> -->
-
+    <!-- <div class="dish-id"  data-id="${dish.id}"></div> -->
     <!-- _____________________Страница корзины______________________________ -->
     <!-- <div class="basket">
       <div class="basket-container">
@@ -114,14 +115,7 @@
       </div>
     </div> -->
 
-    <script src="/scripts/components/menu.js"></script>
-    <!-- <script src="/scripts/components/basket.js"></script> -->
-    <!-- <script src="/scripts/components/switchers.js"></script> -->
     <script src="/scripts/components/addDish.js"></script>
-    <script src="/scripts/components/renderDishInDishPage.js"></script>
-
-    <!-- <script src="/scripts/components/counter.js"></script>
-    <script src="/scripts/components/dish-info.js"></script>
-    <script src="/scripts/components/basket.js"></script> -->
+    <script src="/scripts/components/menuPage.js"></script>
   </body>
 </html>
