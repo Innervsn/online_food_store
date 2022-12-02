@@ -15,66 +15,66 @@ basketStatus();
 
 //______Переход на страницу "Корзина" по клику на кнопку "корзина"_________
 
-function basketLink() {
-  window.location.href = "http://127.0.0.1:5500/basket-page.html";
-}
+// function basketLink() {
+//   window.location.href = "http://127.0.0.1:5500/basket-page.html";
+// }
 
-function menuLink() {
-  window.location.href = "http://127.0.0.1:5500/";
-}
+// function menuLink() {
+//   window.location.href = "http://127.0.0.1:5500/";
+// }
 
 //_____________________________________________________________________________
-// const basketSwitcher = () => {
-//   const backBtn = document.querySelector(".header__btn-back");
-//   const menuTitle = document.querySelector(".header__title");
-//   const basketTitle = document.querySelector(".header__title--basket");
-//   const basketBtn = document.querySelector(".header__basket-link");
-//   const headerList = document.querySelector(".header__list");
-//   const menuPage = document.querySelector(".menu");
-//   const basketPage = document.querySelector(".basket");
-//   const basketLine = document.querySelector(".line");
-//   // const menuBackground = document.querySelector(".body-menu");
-//   // const basketBackground = document.querySelector(".body-basket");
+const basketSwitcher = () => {
+  const backBtn = document.querySelector(".header__btn-back");
+  const menuTitle = document.querySelector(".header__title");
+  const basketTitle = document.querySelector(".header__title--basket");
+  const basketBtn = document.querySelector(".header__basket-link");
+  const headerList = document.querySelector(".header__list");
+  const menuPage = document.querySelector(".menu");
+  const basketPage = document.querySelector(".basket");
+  const basketLine = document.querySelector(".line");
+  // const menuBackground = document.querySelector(".body-menu");
+  // const basketBackground = document.querySelector(".body-basket");
 
-//   basketBtn.addEventListener("click", () => {
-//     backBtn.style.display = "block";
-//     basketTitle.style.display = "block";
-//     basketPage.style.display = "block";
-//     basketLine.style.display = "block";
-//     // basketBackground.style.display = "block";
-//     // menuBackground.style.display = "none";
-//     menuPage.style.display = "none";
-//     menuTitle.style.display = "none";
-//     headerList.style.display = "none";
-//     basketBtn.style.display = "none";
-//   });
-// };
+  basketBtn.addEventListener("click", () => {
+    backBtn.style.display = "block";
+    basketTitle.style.display = "block";
+    basketPage.style.display = "block";
+    basketLine.style.display = "block";
+    // basketBackground.style.display = "block";
+    // menuBackground.style.display = "none";
+    menuPage.style.display = "none";
+    menuTitle.style.display = "none";
+    headerList.style.display = "none";
+    basketBtn.style.display = "none";
+  });
+};
 
-// basketSwitcher();
+basketSwitcher();
 
-// const backMenuBtn = () => {
-//   const backBtn = document.querySelector(".header__btn-back");
-//   const menuTitle = document.querySelector(".header__title");
-//   const basketTitle = document.querySelector(".header__title--basket");
-//   const basketBtn = document.querySelector(".header__basket-link");
-//   const headerList = document.querySelector(".header__list");
-//   const menuPage = document.querySelector(".menu");
-//   const basketPage = document.querySelector(".basket");
-//   const basketLine = document.querySelector(".line");
+const backMenuBtn = () => {
+  const backBtn = document.querySelector(".header__btn-back");
+  const menuTitle = document.querySelector(".header__title");
+  const basketTitle = document.querySelector(".header__title--basket");
+  const basketBtn = document.querySelector(".header__basket-link");
+  const headerList = document.querySelector(".header__list");
+  const menuPage = document.querySelector(".menu");
+  const basketPage = document.querySelector(".basket");
+  const basketLine = document.querySelector(".line");
 
-//   backBtn.addEventListener("click", () => {
-//     backBtn.style.display = "none";
-//     basketTitle.style.display = "none";
-//     basketPage.style.display = "none";
-//     basketLine.style.display = "none";
-//     menuPage.style.display = "block";
-//     menuTitle.style.display = "block";
-//     headerList.style.display = "block";
-//     basketBtn.style.display = "block";
-//   });
-// };
+  backBtn.addEventListener("click", () => {
+    backBtn.style.display = "none";
+    basketTitle.style.display = "none";
+    basketPage.style.display = "none";
+    basketLine.style.display = "none";
+    menuPage.style.display = "block";
+    menuTitle.style.display = "block";
+    headerList.style.display = "block";
+    basketBtn.style.display = "block";
+  });
+};
 
-// backMenuBtn();
+backMenuBtn();
 
 // const textSwitcher = () => { // окончание слова "товар" в соответствии с кол-вом
 //   const text1 = document.querySelector(".header__amount-text");

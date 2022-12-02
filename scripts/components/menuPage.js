@@ -18,30 +18,30 @@ const menuList = () => {
       dishItem.setAttribute("data-id", `${dish.id}`);
 
       dishItem.innerHTML = `
-          <div class="menu__dish-image">
+      <div class="menu__dish-image">
           
-            <img
+      <img
               class="menu__dish-img"
               src="${dish.imgSrc}"
               alt="" />
           </div>
-
+          
           <div class="menu__dish-about">
           <h2 class="menu__dish-title">
-            ${dish.title}
+          ${dish.title}
             </h2>
             
             <p class="menu__dish-description">
             ${dish.description}
             </p>
-          </div>
-          
-          <div class="menu__dish-price">
+            </div>
+            
+            <div class="menu__dish-price">
             <div class="menu__dish-params">
             <span class="menu__dish-cost">${dish.price}</span>
               <span class="menu__dish-weight">${dish.weight}</span>
               </div>
-
+              
               <button class="menu__dish-add" data-cart="add-dish"></button>
               </div>
               `;
@@ -86,19 +86,22 @@ const menuList = () => {
                     <p class="info-dish__description">${productInfo.description}</p>
           
                     <div class="info-dish__order">
-                      <div class="info-dish__params">
+                    <div class="info-dish__params">
                         <span class="info-dish__cost">${productInfo.price}</span>
                         <span class="info-dish__weight">${productInfo.weight}</span>
                       </div>
-                      <button class="info-dish__add-btn">В корзину</button>
+                      <buttgit n class="info-dish__add-btn">В корзину</buttgit>
                     </div>
                   </div>
                 </div>
-              </div>
-              `;
+                </div>
+                `;
           };
 
           openModalWindow();
+
+          const closeBtn = document.querySelector(".info__btn-back");
+          closeBtn.addEventListener("click", () => closeBntModalWindow());
         }
 
         const closeBntModalWindow = () => {
@@ -117,9 +120,6 @@ const menuList = () => {
             closeBntModalWindow();
           }
         });
-
-        const closeBtn = document.querySelector(".info__btn-back");
-        closeBtn.addEventListener("click", () => closeBntModalWindow());
       });
     });
   };

@@ -10,12 +10,7 @@
   <body class="body">
     <header class="header">
       <div class="header-container">
-        <button class="header__btn-back"></button>
         <h1 class="header__title">наша продукция</h1>
-        <h1 class="header__title header__title--basket">
-          Корзина с выбранными товарами
-        </h1>
-
         <div class="header__right-block">
           <input class="header__search" type="text" />
           <div class="header__basket">
@@ -32,12 +27,15 @@
               </div>
             </div>
 
-            <a class="header__basket-link">
-              <img
+            <button
+              class="header__basket-link"
+              type="button"
+              onclick="basketLink()">
+              <!-- <img
                 class="header__basket-link--img"
                 src="/images/menu/basket_btn_img.svg"
-                alt="" />
-            </a>
+                alt="" /> -->
+            </button>
           </div>
 
           <button class="header__logout-btn">Выйти</button>
@@ -117,5 +115,6 @@
 
     <script src="/scripts/components/addDish.js"></script>
     <script src="/scripts/components/menuPage.js"></script>
+    <!-- <script src="/scripts/components/switchers.js"></script> -->
   </body>
 </html>
