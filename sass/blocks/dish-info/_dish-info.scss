@@ -1,8 +1,3 @@
-// .info-body {
-//   background-image: url(/images/dish-info/dish-info_bg.jpg);
-//   background-size: cover;
-// }
-
 .info {
   display: none;
   position: fixed;
@@ -13,8 +8,8 @@
   transition: width 2s;
 
   &-container {
-    width: 1200px;
-    height: 700px;
+    width: 75%;
+    height: 70%;
     margin: 0 auto;
     padding-top: 25px;
     background-image: url(/images/dish-info/dish-info_bg.jpg);
@@ -24,165 +19,20 @@
 
   &__btn-back {
     margin-left: 40px;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
     width: 32px;
     height: 32px;
-    border: 1px solid #d58c51;
+    border: 2px solid #d58c51;
     border-radius: 50px;
     background-image: url(/images/basket/btn_back.svg);
     background-position: center;
     background-color: transparent;
   }
-  // &-header {
-  //   // margin: 25px 0 55px;
-  //   padding: 20px 0px;
-  //   position: sticky;
-  //   z-index: 3;
-  //   top: 0;
 
-  //   &-container {
-  //     display: flex;
-  //     justify-content: space-between;
-  //     align-items: center;
-  //     max-width: 1300px;
-  //     margin: 0 auto;
-  //   }
-
-  //   &__btn-back {
-  //     display: none;
-  //     width: 32px;
-  //     height: 32px;
-  //     border: 1px solid #d58c51;
-  //     border-radius: 50px;
-  //     background-image: url(/images/basket/btn_back.svg);
-  //     background-position: center;
-  //     background-color: transparent;
-  //   }
-
-  //   &__btn-back:hover {
-  //     cursor: pointer;
-  //   }
-
-  //   &__title {
-  //     margin: 0;
-  //     font-family: "Montserrat-Bold", sans-serif;
-  //     font-style: normal;
-  //     font-weight: 700;
-  //     font-size: 31px;
-  //     line-height: 38px;
-  //     text-transform: uppercase;
-  //     color: #ffffff;
-
-  //     &--basket {
-  //       display: none;
-  //     }
-  //   }
-
-  //   &__right-block {
-  //     display: flex;
-  //     align-items: center;
-  //     gap: 20px;
-  //   }
-
-  //   &__basket {
-  //     display: flex;
-  //     align-items: center;
-  //     gap: 20px;
-  //   }
-
-  //   &__list {
-  //     display: block;
-  //     text-align: end;
-  //   }
-
-  //   &__amount-number {
-  //     // display: inline-block;
-  //     // width: 25px;
-  //     font-family: "Montserrat-Medium", sans-serif;
-  //     font-style: normal;
-  //     font-weight: 500;
-  //     font-size: 17px;
-  //     line-height: 21px;
-  //     text-align: right;
-  //     color: #ffffff;
-  //   }
-
-  //   &__amount-text {
-  //     // display: inline-block;
-  //     // width: 80px;
-  //     padding-left: 5px;
-  //     font-family: "Montserrat-Medium", sans-serif;
-  //     font-style: normal;
-  //     font-weight: 500;
-  //     font-size: 17px;
-  //     line-height: 21px;
-  //     text-align: right;
-  //     color: #ffffff;
-  //   }
-
-  //   &__sum-text {
-  //     font-family: "Montserrat-Medium", sans-serif;
-  //     font-style: normal;
-  //     font-weight: 500;
-  //     font-size: 17px;
-  //     line-height: 21px;
-  //     text-align: right;
-  //     color: #ffffff;
-  //   }
-
-  //   &__sum-cost {
-  //     display: inline-block;
-  //     width: 55px;
-  //     // padding-left: 8px;
-  //     font-family: "Montserrat-Medium", sans-serif;
-  //     font-style: normal;
-  //     font-weight: 500;
-  //     font-size: 17px;
-  //     line-height: 21px;
-  //     text-align: right;
-  //     color: #ffffff;
-  //   }
-
-  //   &__rubles {
-  //     padding-left: 8px;
-  //     font-family: "Montserrat-Medium", sans-serif;
-  //     font-style: normal;
-  //     font-weight: 500;
-  //     font-size: 17px;
-  //     line-height: 21px;
-  //     text-align: right;
-  //     color: #ffffff;
-  //   }
-
-  //   &__basket-link {
-  //     display: block;
-  //   }
-
-  //   &__basket-link:hover {
-  //     cursor: pointer;
-  //     opacity: 0.7;
-  //   }
-
-  //   &__logout-btn {
-  //     width: 200px;
-  //     height: 42px;
-  //     border: 1px solid #d58c51;
-  //     background: #161516;
-  //     font-family: "Montserrat-Regular", sans-serif;
-  //     font-style: normal;
-  //     font-weight: 400;
-  //     font-size: 14px;
-  //     line-height: 17px;
-  //     color: #d58c51;
-  //   }
-
-  //   &__logout-btn:hover {
-  //     cursor: pointer;
-  //     transition: 0.3s;
-  //     background-color: #d58c51;
-  //     color: #ffffff;
-  //   }
-  // }
+  &__btn-back:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
 
   &-main {
     display: flex;
@@ -257,15 +107,13 @@
 
     &__add-btn:hover {
       cursor: pointer;
-      transition: 0.4s;
       color: #ffffff;
     }
 
     &__add-btn:active {
       cursor: pointer;
-      opacity: 0.6;
       color: #ffffff;
-      border: 1px solid #ffffff;
+      outline: 1px solid #d58c51;
     }
   }
 }

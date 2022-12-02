@@ -1,25 +1,17 @@
-// .body-basket {
-//   display: none;
-//   background-image: url(/images/dish-info/dish-info_bg.jpg);
-// }
-::-webkit-scrollbar {
-  width: 0;
-}
-
-.body {
+.basket-body {
   margin: 0;
   background: #161516;
 }
 
-.header {
-  // margin: 25px 0 55px;
+.basket-header {
+  margin-bottom: 60px;
   padding: 20px 0px;
   background: #161516;
   position: sticky;
   z-index: 3;
   top: 0;
 
-  &-container {
+  &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,10 +20,9 @@
   }
 
   &__btn-back {
-    display: none;
     width: 32px;
     height: 32px;
-    border: 1px solid #d58c51;
+    border: 2px solid #d58c51;
     border-radius: 50px;
     background-image: url(/images/basket/btn_back.svg);
     background-position: center;
@@ -40,6 +31,7 @@
 
   &__btn-back:hover {
     cursor: pointer;
+    opacity: 0.7;
   }
 
   &__title {
@@ -63,13 +55,6 @@
     gap: 20px;
   }
 
-  &__search {
-    height: 30px;
-    border: 2px solid #d58c51;
-    outline: none;
-    text-indent: 5px;
-  }
-
   &__basket {
     display: flex;
     align-items: center;
@@ -82,8 +67,6 @@
   }
 
   &__amount-number {
-    // display: inline-block;
-    // width: 25px;
     font-family: "Montserrat-Medium", sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -94,8 +77,6 @@
   }
 
   &__amount-text {
-    // display: inline-block;
-    // width: 80px;
     padding-left: 5px;
     font-family: "Montserrat-Medium", sans-serif;
     font-style: normal;
@@ -119,7 +100,6 @@
   &__sum-cost {
     display: inline-block;
     width: 55px;
-    // padding-left: 8px;
     font-family: "Montserrat-Medium", sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -138,15 +118,6 @@
     line-height: 21px;
     text-align: right;
     color: #ffffff;
-  }
-
-  &__basket-link {
-    display: block;
-  }
-
-  &__basket-link:hover {
-    cursor: pointer;
-    opacity: 0.7;
   }
 
   &__logout-btn {

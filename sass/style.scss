@@ -1,10 +1,15 @@
+::-webkit-scrollbar {
+  width: 0;
+}
+
 // Шрифты
 @import "./base/fonts";
 
 //Блоки
 @import "./blocks/entry-registration/entry-form";
 @import "./blocks/entry-registration/reg-form";
-@import "./blocks/header/header";
+@import "./blocks/menu/menu-header";
 @import "./blocks/menu/menu-list";
 @import "./blocks/basket/basket";
+@import "./blocks/basket/basket-header";
 @import "./blocks/dish-info/dish-info";

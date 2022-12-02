@@ -4,7 +4,6 @@
 }
 
 .basket {
-  // display: none;
 
   &-container {
     max-width: 1300px;
@@ -31,58 +30,8 @@
   &-list {
     max-width: 1000px;
     margin: 0 auto;
+    margin-bottom: 80px;
   }
-  // &-header {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: center;
-  //   margin: 35px 0 75px;
-  //   padding-top: 10px;
-  //   background: #161516;
-  //   position: sticky;
-  //   z-index: 3;
-  //   top: 0;
-
-  //   &__left-block {
-  //     display: flex;
-  //     align-items: center;
-  //     gap: 63px;
-  //   }
-
-  //   &__btn-back {
-  //     width: 32px;
-  //     height: 32px;
-  //     border: 1px solid #d58c51;
-  //     border-radius: 50px;
-  //     background-image: url(/images/basket/btn_back.svg);
-  //     background-position: center;
-  //     background-color: #161516;
-  //   }
-
-  //   &__title {
-  //     margin: 0;
-  //     font-family: "Montserrat-Bold", sans-serif;
-  //     font-style: normal;
-  //     font-weight: 700;
-  //     font-size: 31px;
-  //     line-height: 38px;
-  //     text-transform: uppercase;
-  //     color: #ffffff;
-  //   }
-
-  //   &__btn-logout {
-  //     width: 200px;
-  //     height: 42px;
-  //     border: 1px solid #d58c51;
-  //     background-color: #161516;
-  //     font-family: "Montserrat-Regular", sans-serif;
-  //     font-style: normal;
-  //     font-weight: 400;
-  //     font-size: 14px;
-  //     line-height: 17px;
-  //     color: #d58c51;
-  //   }
-  // }
 
   &-dish {
     display: flex;
@@ -304,17 +253,6 @@
     bottom: 0;
     padding: 25px 0;
 
-    // &__cost {
-    //   position: relative;
-    // }
-
-    // &__line {
-    //   position: absolute;
-    //   width: 100%;
-    //   top: -42px;
-    //   border-color: #d58c51;
-    // }
-
     &__title {
       margin-right: 16px;
       font-family: "Montserrat-Regular", sans-serif;
@@ -327,6 +265,8 @@
     }
 
     &__sum {
+      display: inline-block;
+      width: 55px;
       font-family: "Montserrat-Regular", sans-serif;
       font-style: normal;
       font-weight: 400;
@@ -353,19 +293,24 @@
       font-weight: 400;
       font-size: 14px;
       line-height: 17px;
+      border: none;
       color: #131313;
     }
 
     &__btn-order:hover {
       cursor: pointer;
-      transition: 0.3s;
       color: #ffffff;
+    }
+
+    &__btn-order:active {
+      cursor: pointer;
+      color: #ffffff;
+      outline: 1px solid #d58c51;
     }
   }
 }
 
 .line {
-  // display: none;
   margin: -10px 0px 0px 0px;
   width: 100%;
   border-color: #d58c51;

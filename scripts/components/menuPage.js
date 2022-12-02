@@ -18,15 +18,15 @@ const menuList = () => {
       dishItem.setAttribute("data-id", `${dish.id}`);
 
       dishItem.innerHTML = `
-          <div class="menu__dish-image">
+      <div class="menu__dish-image">
           
             <img
               class="menu__dish-img"
               src="${dish.imgSrc}"
               alt="" />
-          </div>
+              </div>
 
-          <div class="menu__dish-about">
+              <div class="menu__dish-about">
           <h2 class="menu__dish-title">
             ${dish.title}
             </h2>
@@ -34,7 +34,7 @@ const menuList = () => {
             <p class="menu__dish-description">
             ${dish.description}
             </p>
-          </div>
+            </div>
           
           <div class="menu__dish-price">
             <div class="menu__dish-params">
@@ -47,6 +47,28 @@ const menuList = () => {
               `;
 
       menuBlock.appendChild(dishItem);
+
+      //_____Поиск
+      document.querySelector(".header__search").oninput = function () {
+        let val = this.value.trim().toLowerCase();
+        let dishes = document.querySelectorAll(".menu__dish");
+
+        if (val != "") {
+          dishes.forEach(function (dishElement) {
+            let titleElement = dishElement.querySelector(".menu__dish-title");
+
+            if (titleElement.innerText.toLowerCase().includes(val)) {
+              dishElement.classList.remove("hide");
+            } else {
+              dishElement.classList.add("hide");
+            }
+          });
+        } else {
+          dishes.forEach(function (dishElement) {
+            dishElement.classList.remove("hide");
+          });
+        }
+      };
 
       const modalWindow = document.querySelector(".info");
 
@@ -64,27 +86,23 @@ const menuList = () => {
             weight: card.querySelector(".menu__dish-weight").innerText,
           };
 
-          // const dishInModal = modalWindow.querySelector(
-          //   `[data-id="${productInfo.id}"]`
-          // );
-
           const openModalWindow = () => {
             modalWindow.classList.add("info-show");
             document.body.classList.add("stop-scrolling");
 
             modalWindow.innerHTML = `
-              <div class="info-container">
-              <button class="info__btn-back"></button>
-              <div class="info-main" data-id="${productInfo.id}">
-                  <img
-                  class="info-main__dish-img"
-                    src="${productInfo.imgSrc}"
+            <div class="info-container">
+            <button class="info__btn-back"></button>
+            <div class="info-main" data-id="${productInfo.id}">
+            <img
+            class="info-main__dish-img"
+                  src="${productInfo.imgSrc}"
                     alt="" />
           
                     <div class="info-dish">
                     <h2 class="info-dish__title">${productInfo.title}</h2>
                     <p class="info-dish__description">${productInfo.description}</p>
-          
+                    
                     <div class="info-dish__order">
                       <div class="info-dish__params">
                         <span class="info-dish__cost">${productInfo.price}</span>
@@ -94,11 +112,14 @@ const menuList = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+                </div>
               `;
           };
 
           openModalWindow();
+
+          const closeBtn = document.querySelector(".info__btn-back");
+          closeBtn.addEventListener("click", () => closeBntModalWindow());
         }
 
         const closeBntModalWindow = () => {
@@ -117,88 +138,31 @@ const menuList = () => {
             closeBntModalWindow();
           }
         });
-
-        const closeBtn = document.querySelector(".info__btn-back");
-        closeBtn.addEventListener("click", () => closeBntModalWindow());
       });
     });
   };
-
-  // // Поиск блюда
-  // const searchForm = document.querySelector(".header__search");
-
-  // searchForm.addEventListener("submit", (e) => {
-  //   e.preventDefault();
-  //   const titleSearch = searchForm.value;
-  //   if (searchForm.value) {
-  //     getDish(titleSearch);
-  //   }
-  // });
 };
 
 menuList();
 
-// _______Модальное окно
 
-//___________________Вариант с рендером
+//__________Получение кол-ва товаров из local storage
+const countSum = () => {
+  window.addEventListener("storage", function () {
+    let headerSumCounter = localStorage.getItem("totalPriceInHeader");
+    let count = document.querySelector(".header__sum-cost");
+    count.innerText = JSON.parse(headerSumCounter);
+  });
+};
 
-// const modalWindow = document.querySelector(".info");
+countSum();
 
-// async function openModalWindow() {
-//   const response = await fetch("./scripts/components/products.json");
+const countAmount = () => {
+  window.addEventListener("storage", function () {
+    let headerAmountCounter = localStorage.getItem("totalAmountInHeader");
+    let count = document.querySelector(".header__amount-number");
+    count.innerText = JSON.parse(headerAmountCounter);
+  });
+};
 
-//   const dishArray = await response.json();
-
-//   renderModalWindow(dishArray);
-
-//   const closeBtn = document.querySelector(".info__btn-back");
-
-//   closeBtn.addEventListener("click", () => closeBntModalWindow());
-// }
-
-// const renderModalWindow = (dishList) => {
-//   dishList.forEach((dish) => {
-//     modalWindow.classList.add("info-show");
-
-//     modalWindow.innerHTML = `
-//     <div class="info-container">
-//     <button class="info__btn-back"></button>
-//     <div class="info-main" data-id="${dish.id}">
-//     <img
-//     class="info-main__dish-img"
-//     src="${dish.imgSrc}"
-//     alt="" />
-
-//           <div class="info-dish">
-//             <h2 class="info-dish__title">${dish.title}</h2>
-//             <p class="info-dish__description">${dish.description}</p>
-
-//             <div class="info-dish__order">
-//             <div class="info-dish__params">
-//                 <span class="info-dish__cost">${dish.price}</span>
-//                 <span class="info-dish__weight">${dish.weight}</span>
-//                 </div>
-//                 <button class="info-dish__add-btn">В корзину</button>
-//                 </div>
-//             </div>
-//             </div>
-//             </div>
-//             `;
-//   });
-// };
-
-// const closeBntModalWindow = () => {
-//   modalWindow.classList.remove("info-show");
-// };
-
-// window.addEventListener("click", (e) => {
-//   if (e.target === modalWindow) {
-//     closeBntModalWindow();
-//   }
-// });
-
-// window.addEventListener("keydown", (e) => {
-//   if (e.keyCode === 27) {
-//     closeBntModalWindow();
-//   }
-// });
+countAmount();
