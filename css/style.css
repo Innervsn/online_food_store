@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+  width: 0;
+}
+
 @font-face {
   font-family: "Montserrat-Thin";
   src: url("/fonts/Montserrat-Thin.ttf");
@@ -355,10 +359,6 @@
   color: #131313;
 }
 
-::-webkit-scrollbar {
-  width: 0;
-}
-
 .body {
   margin: 0;
   background: #161516;
@@ -476,6 +476,12 @@
 }
 .header__basket-link {
   display: block;
+  width: 50px;
+  height: 50px;
+  background: url("/images/menu/basket_btn_img.svg");
+  border: 2px solid #d58c51;
+  border-radius: 50px;
+  background-position: center;
 }
 .header__basket-link:hover {
   cursor: pointer;
@@ -857,12 +863,17 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
+  border: none;
   color: #131313;
 }
 .basket-order__btn-order:hover {
   cursor: pointer;
-  transition: 0.3s;
   color: #ffffff;
+}
+.basket-order__btn-order:active {
+  cursor: pointer;
+  color: #ffffff;
+  outline: 1px solid #d58c51;
 }
 
 .line {
@@ -875,18 +886,145 @@
   bottom: 92px;
 }
 
+.basket-body {
+  margin: 0;
+  background: #161516;
+}
+
+.basket-header {
+  padding: 20px 0px;
+  background: #161516;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 3;
+  top: 0;
+}
+.basket-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.basket-header__btn-back {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #d58c51;
+  border-radius: 50px;
+  background-image: url(/images/basket/btn_back.svg);
+  background-position: center;
+  background-color: transparent;
+}
+.basket-header__btn-back:hover {
+  cursor: pointer;
+}
+.basket-header__title {
+  margin: 0;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 38px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.basket-header__title--basket {
+  display: none;
+}
+.basket-header__right-block {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.basket-header__basket {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.basket-header__list {
+  display: block;
+  text-align: end;
+}
+.basket-header__amount-number {
+  font-family: "Montserrat-Medium", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  text-align: right;
+  color: #ffffff;
+}
+.basket-header__amount-text {
+  padding-left: 5px;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  text-align: right;
+  color: #ffffff;
+}
+.basket-header__sum-text {
+  font-family: "Montserrat-Medium", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  text-align: right;
+  color: #ffffff;
+}
+.basket-header__sum-cost {
+  display: inline-block;
+  width: 55px;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  text-align: right;
+  color: #ffffff;
+}
+.basket-header__rubles {
+  padding-left: 8px;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  text-align: right;
+  color: #ffffff;
+}
+.basket-header__logout-btn {
+  width: 200px;
+  height: 42px;
+  border: 1px solid #d58c51;
+  background: #161516;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #d58c51;
+}
+.basket-header__logout-btn:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #d58c51;
+  color: #ffffff;
+}
+
 .info {
   display: none;
   position: fixed;
   width: 100%;
   height: 100%;
-  padding-top: 150px;
+  padding-top: 100px;
   z-index: 100;
   transition: width 2s;
 }
 .info-container {
   width: 1200px;
-  height: 700px;
+  height: 70%;
   margin: 0 auto;
   padding-top: 25px;
   background-image: url(/images/dish-info/dish-info_bg.jpg);
@@ -895,7 +1033,7 @@
 }
 .info__btn-back {
   margin-left: 40px;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
   width: 32px;
   height: 32px;
   border: 1px solid #d58c51;

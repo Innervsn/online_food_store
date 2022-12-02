@@ -8,38 +8,31 @@
     <title>Document</title>
   </head>
   <body class="basket-body">
-    <header class="header">
-      <div class="header-container">
-        <button class="header__btn-back"></button>
-        <h1 class="header__title">наша продукция</h1>
-        <h1 class="header__title header__title--basket">
-          Корзина с выбранными товарами
-        </h1>
+    <header class="basket-header">
+      <div class="basket-header__container">
+        <button
+          class="basket-header__btn-back"
+          type="button"
+          onclick="menuLink()"></button>
+        <h1 class="basket-header__title">Корзина с выбранными товарами</h1>
 
-        <div class="header__right-block">
-          <div class="header__basket">
-            <div class="header__list">
-              <div class="header__amount">
-                <span class="header__amount-number" data-counter></span>
-                <span class="header__amount-text">товаров</span>
+        <div class="basket-header__right-block">
+          <div class="basket-header__basket">
+            <div class="basket-header__list">
+              <div class="basket-header__amount">
+                <span class="basket-header__amount-number" data-counter></span>
+                <span class="basket-header__amount-text">товаров</span>
               </div>
 
-              <div class="header__sum">
-                <span class="header__sum-text">на сумму</span>
-                <span class="header__sum-cost"></span>
-                <span class="header__rubles">₽</span>
+              <div class="basket-header__sum">
+                <span class="basket-header__sum-text">на сумму</span>
+                <span class="basket-header__sum-cost"></span>
+                <span class="basket-header__rubles">₽</span>
               </div>
             </div>
-
-            <a class="header__basket-link">
-              <img
-                class="header__basket-link--img"
-                src="/images/menu/basket_btn_img.svg"
-                alt="" />
-            </a>
           </div>
 
-          <button class="header__logout-btn">Выйти</button>
+          <button class="basket-header__logout-btn">Выйти</button>
         </div>
       </div>
     </header>
@@ -68,6 +61,7 @@
         </footer>
       </div>
     </div>
+    
     <script src="/scripts/components/switchers.js"></script>
     <script src="/scripts/components/basket.js"></script>
     <!-- <script src="/scripts/components/dish-info.js"></script> -->

@@ -353,13 +353,19 @@
       font-weight: 400;
       font-size: 14px;
       line-height: 17px;
+      border: none;
       color: #131313;
     }
 
     &__btn-order:hover {
       cursor: pointer;
-      transition: 0.3s;
       color: #ffffff;
+    }
+
+    &__btn-order:active {
+      cursor: pointer;
+      color: #ffffff;
+      outline: 1px solid #d58c51;
     }
   }
 }

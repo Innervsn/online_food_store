@@ -8,13 +8,13 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  padding-top: 150px;
+  padding-top: 100px;
   z-index: 100;
   transition: width 2s;
 
   &-container {
     width: 1200px;
-    height: 700px;
+    height: 70%;
     margin: 0 auto;
     padding-top: 25px;
     background-image: url(/images/dish-info/dish-info_bg.jpg);
@@ -24,7 +24,7 @@
 
   &__btn-back {
     margin-left: 40px;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
     width: 32px;
     height: 32px;
     border: 1px solid #d58c51;
