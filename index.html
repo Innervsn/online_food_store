@@ -8,11 +8,12 @@
     <title>Document</title>
   </head>
   <body class="body">
+    <div class="info"></div>
     <header class="header">
       <div class="header-container">
         <h1 class="header__title">наша продукция</h1>
         <div class="header__right-block">
-          <input class="header__search" type="text" />
+          <input class="header__search" type="text" placeholder="Введите блюдо"/>
           <div class="header__basket">
             <div class="header__list">
               <div class="header__amount">
@@ -31,10 +32,6 @@
               class="header__basket-link"
               type="button"
               onclick="basketLink()">
-              <!-- <img
-                class="header__basket-link--img"
-                src="/images/menu/basket_btn_img.svg"
-                alt="" /> -->
             </button>
           </div>
 
@@ -44,77 +41,12 @@
     </header>
 
     <main class="menu">
-      <div class="menu-container">
-        <div class="info"></div>
-      </div>
+      <div class="menu-container"></div>
     </main>
 
-    <!-- модальное окно -->
-
-    <!--______________________ Окно блюда _______________________________-->
-    <!-- <div class="info">
-      <div class="info-container">
-        <div class="info-main">
-          <img
-            class="info-main__dish-img"
-            src="/images/menu/dish_2.svg"
-            alt="" />
-
-          <div class="info-dish">
-            <h2 class="info-dish__title">Свиные ребрышки на гриле</h2>
-            <p class="info-dish__description">
-              Не следует, однако забывать, что консультация с широким активом
-              представляет собой интересный эксперимент проверки новых
-              предложений. Не следует, однако забывать, что сложившаяся
-              структура организации позволяет оценить значение новых
-              предложений. Разнообразный и богатый опыт начало повседневной
-              работы по формированию позиции требуют от нас анализа позиций.Не
-              следует, однако забывать, что консультация с широким активом
-              представляет собой интересный эксперимент проверки новых
-              предложений. Не следует, однако забывать, что сложившаяся
-              структура организации позволяет оценить значение новых
-              предложений.
-            </p>
-
-            <div class="info-dish__order">
-              <div class="info-dish__params">
-                <span class="info-dish__cost">1 600 ₽</span>
-                <span class="info-dish__weight"> / 750 г.</span>
-              </div>
-              <button class="info-dish__add-btn">В корзину</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- <div class="dish-id"  data-id="${dish.id}"></div> -->
-    <!-- _____________________Страница корзины______________________________ -->
-    <!-- <div class="basket">
-      <div class="basket-container">
-        <div class="basket-empty">
-          <img
-            class="basket-empty__img"
-            src="/images/basket/basket-empty.png"
-            alt="" />
-          <h2 class="basket-empty__title">Корзина пуста</h2>
-        </div>
-
-        <div class="basket-list"></div>
-        <hr class="line" />
-        <footer class="basket-order">
-          <div class="basket-order__cost">
-            <span class="basket-order__title">Заказ на сумму:</span>
-            <span class="basket-order__sum"></span>
-            <span class="basket-order__sum-rubles">₽</span>
-          </div>
-
-          <button class="basket-order__btn-order">Оформить заказ</button>
-        </footer>
-      </div>
-    </div> -->
-
+    <script src="/scripts/components/state.js"></script>
     <script src="/scripts/components/addDish.js"></script>
     <script src="/scripts/components/menuPage.js"></script>
-    <!-- <script src="/scripts/components/switchers.js"></script> -->
+    <script src="/scripts/components/switchers.js"></script>
   </body>
 </html>
